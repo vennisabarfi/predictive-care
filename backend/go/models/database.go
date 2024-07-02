@@ -29,13 +29,27 @@ func ConnectDB() {
 	db_url := env_Variable("DB_URL")
 	dsn := os.Getenv(db_url)
 
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
-	if err != nil {
-		log.Fatalf("Error accessing database", err)
-	}
+	var err error
+	DB, err = gorm.Open(postgres.Open(dsn), &gorm.Config{})
 
+	if err != nil {
+		log.Fatal("Failed to connect to DB:", err)
+	}
 }
 
+func MigrateDatabase() error {
+	// AutoMigrate all models here
+	if err := DB.AutoMigrate(&User{}); err != nil {
+		return err
+	}
+	// Add more AutoMigrate calls for other models if needed
+
+	return nil
+}
+
+//Models defined below
+
+// User model
 type User struct {
 	ID        uint    `json:"id" gorm:"primary_key"`
 	username  string  `json:"username" gorm:"unique"`

@@ -18,27 +18,26 @@ func env_Variable(key string) string {
 	err := godotenv.Load(".env")
 
 	if err != nil {
-		log.Fatalf("Error loading .env file")
+		log.Fatalf("Error loading .env file", err)
 	}
 
 	return os.Getenv(key)
 }
 
 func main() {
+	// gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"data": "hello world"})
-		port := env_Variable("PORT")
-		//check for errors
-		error := r.Run(port)
 
-		if error != nil {
-			c.IndentedJSON(http.StatusInternalServerError, gin.H{
-				"error": "Failed to retrieve tasks.",
-			})
-			return
-		}
 	})
+	port := ":" + env_Variable("PORT")
+	//check for errors
+	error := r.Run(port)
+
+	if error != nil {
+		log.Fatalf("Failed to start server: %v", error)
+	}
 
 }

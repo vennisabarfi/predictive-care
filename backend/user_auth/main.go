@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"log"
 	"net/http"
 	"os"
@@ -11,6 +12,7 @@ import (
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
+	"gorm.io/gorm"
 )
 
 const userkey = "user"
@@ -46,10 +48,32 @@ func AuthRequired(c *gin.Context) {
 
 // login handler. Parses a form and checks for specific data
 func login(c *gin.Context) {
-	session := sessions.Default(c)
-	username := c.PostForm("username")
-	password := c.PostForm("password")
+	// parse email and password from body
+	var body struct {
+		Email    string `json:"email" binding:"required,email"`
+		Password string `json:"password" binding:"required,min=8"`
+	}
 
+	err := c.ShouldBindJSON(&body)
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"message": "Invalid email or password",
+		})
+		return
+	}
+
+	//Get user from database
+	var db *gorm.DB
+	var user models.User
+	result := db.Where("email =?", body.Email).First(&user)
+
+	if result.Error != nil {
+		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
+			c.JSON(http.StatusBadRequest, gin.H{
+				"message": "Invalid email or password",
+			})
+		}
+	}
 }
 
 func logout(c *gin.Context) {

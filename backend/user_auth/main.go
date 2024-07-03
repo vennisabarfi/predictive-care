@@ -47,6 +47,37 @@ import (
 // 	c.Next()
 // }
 
+// Sign up handler
+func Signup(c *gin.Context) {
+	//Get email and password from req body
+
+	var body struct {
+		Username string `json:"username" binding:"required"`
+		Email    string `json:"email" binding:"required,email"`
+		Password string `json:"password" binding:"required,min=8"`
+	}
+
+	if (c.ShouldBindJSON(&body)) != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"message": "Invalid input data",
+		})
+		return
+	}
+
+	//Hash password
+	hashedpassword, err := bcrypt.GenerateFromPassword([]byte(body.Password), 10)
+
+	if err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"message": "Failed to read input data",
+		})
+		return
+	}
+
+	user := models.User{Username: body.Username, Email: &body.Email, Password: string(hashedpassword)}
+
+}
+
 // login handler. Parses a form and checks for specific data
 func login(c *gin.Context) {
 	// parse email and password from body
@@ -91,6 +122,10 @@ func login(c *gin.Context) {
 		return
 	}
 
+	/*
+		Token created with 30-day expiration date and signed with secret key.
+		JWT token set as cookie with secure flag and sent over HTTPS
+	*/
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"sub": user.ID,
 		"exp": time.Now().Add(time.Hour * 24 * 30).Unix(),
@@ -104,19 +139,20 @@ func login(c *gin.Context) {
 		return
 	}
 
-	//Set Cookie
+	//Set Cookie ()
 	c.SetSameSite(http.SameSiteLaxMode)
 	c.SetCookie("Authorization", tokenString, 3600*24*30, "", "", true, true)
-}
 
-func logout(c *gin.Context) {
-
+	//send it as a response
+	c.JSON(http.StatusOK, gin.H{
+		"message": "Successfully logged in",
+		"token":   tokenString,
+	})
 }
 
 func main() {
 
-	r := engine()
-	r.Use(gin.Logger())
+	r := gin.New()
 	// port := os.Getenv("PORT")
 
 	err := godotenv.Load(".env")

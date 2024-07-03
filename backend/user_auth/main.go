@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"os"
 	"user_auth/models"
 	"user_auth/storage"
@@ -11,13 +12,14 @@ import (
 )
 
 func main() {
+
 	r := gin.Default()
-	port := ":" + os.Getenv("PORT")
+	// port := os.Getenv("PORT")
 
 	err := godotenv.Load(".env")
 
 	if err != nil {
-		log.Fatal(err)
+		log.Fatal("Error loading .env file", err)
 	}
 	config := &storage.Config{
 		Host:     os.Getenv("DB_HOST"),
@@ -39,9 +41,11 @@ func main() {
 		log.Fatal("User Database could not be migrated", err)
 	}
 
-	err = r.Run(port)
+	//GET Request
+	r.GET("/home", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{"message": "Welcome to Predictive Care API"})
+	})
 
-	if err != nil {
-		log.Fatal("Server is down!", err)
-	}
+	r.Run(":" + os.Getenv("PORT"))
+
 }

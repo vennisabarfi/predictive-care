@@ -144,6 +144,15 @@ func login(c *gin.Context) {
 	c.Redirect(http.StatusSeeOther, "/profile")
 }
 
+// logout handler
+func Logout(c *gin.Context) {
+	//Clear cookie
+	c.SetCookie("Authorization", "", -1, "", "", false, true)
+
+	//Redirect to login page
+	c.Redirect(http.StatusSeeOther, "/login")
+}
+
 func main() {
 
 	r := gin.New()

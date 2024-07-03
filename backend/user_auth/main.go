@@ -16,39 +16,10 @@ import (
 	"gorm.io/gorm"
 )
 
-// const userkey = "user"
-
-// var secret = []byte("secret")
-
-// // Cookie and Session Management
-// func engine() *gin.Engine {
-// 	r := gin.New()
-
-// 	//Setup cookie store for session management
-// 	r.Use(sessions.Sessions("mysession", cookie.NewStore(secret)))
-
-// 	//Login and logout routes
-// 	r.POST("/login", login)
-// 	r.GET("/logout", logout)
-
-// 	return r
-// }
-
-// // Middleware to check the session
-// func AuthRequired(c *gin.Context) {
-// 	session := sessions.Default(c)
-// 	user := session.Get(userkey)
-// 	if user == nil {
-// 		//Abort the request with the appropriate error code
-// 		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "unathorized"})
-// 		return
-// 	}
-// 	// Continue down the chain to handler etc
-// 	c.Next()
-// }
+var db *gorm.DB
 
 // Sign up handler
-func Signup(c *gin.Context) {
+func register(c *gin.Context) {
 	//Get email and password from req body
 
 	var body struct {
@@ -76,9 +47,29 @@ func Signup(c *gin.Context) {
 
 	user := models.User{Username: body.Username, Email: &body.Email, Password: string(hashedpassword)}
 
+	result := db.Create(&user)
+
+	if result.Error != nil {
+		c.JSON(http.StatusBadRequest, gin.H{
+			"message": "Failed to create the user",
+		})
+		return
+	}
+
+	// send a response with user name
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"message": "User created successfully",
+		"user":    user.Username,
+	})
+
+	// Redirect to login page
+	c.Redirect(http.StatusSeeOther, "/login")
+
 }
 
-// login handler. Parses a form and checks for specific data
+/*
+login handler. Parses a form and checks for specific data
+*/
 func login(c *gin.Context) {
 	// parse email and password from body
 	var body struct {
@@ -95,7 +86,7 @@ func login(c *gin.Context) {
 	}
 
 	//Get user from database
-	var db *gorm.DB
+
 	var user models.User
 	result := db.Where("email =?", body.Email).First(&user)
 
@@ -148,6 +139,9 @@ func login(c *gin.Context) {
 		"message": "Successfully logged in",
 		"token":   tokenString,
 	})
+
+	// Redirect to profile page
+	c.Redirect(http.StatusSeeOther, "/profile")
 }
 
 func main() {
@@ -184,6 +178,11 @@ func main() {
 	r.GET("/home", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"message": "Welcome to Predictive Care API"})
 	})
+
+	//login
+	r.POST("/login", login)
+	//sign up
+	r.POST("/register", register)
 
 	r.Run(":" + os.Getenv("PORT"))
 

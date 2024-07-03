@@ -11,9 +11,38 @@ import (
 	"github.com/joho/godotenv"
 )
 
+// Cookie and Session Management
+func engine() *gin.Engine {
+	r := gin.New()
+
+	//Setup cookie store for session management
+	r.Use(sessions.Sessions("mysession", cookie.NewStore(secret))
+)
+
+	//Login and logout routes
+	r.POST("/login", login)
+	r.GET("/logout", logout)
+
+	return r
+}
+
+//Middleware to check the session
+func AuthRequired(c*gin.Context){
+	session := sessions.Default(c)
+	user := session.Get(userkey)
+	if user == nil{
+		//Abort the request with the appropriate error code
+		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "unathorized"})
+		return
+	}
+	// Continue down the chain to handler etc
+	c.Next()
+}
+
 func main() {
 
-	r := gin.Default()
+	r := engine()
+	r.Use(gin.Logger())
 	// port := os.Getenv("PORT")
 
 	err := godotenv.Load(".env")

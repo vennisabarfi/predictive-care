@@ -24,4 +24,4 @@ dist-ssr
 *.sw?
 
 ##do not track src for now
-src 
+src/assets

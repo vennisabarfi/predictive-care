@@ -12,8 +12,6 @@ function App() {
         <Route index element={<Home/>} />
         <Route path ="/login" element={<Login/>}/>
         </Routes>
-        
-
         </BrowserRouter>
       </div>
  

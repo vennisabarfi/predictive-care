@@ -16,10 +16,13 @@ import (
 	"gorm.io/gorm"
 )
 
-var db *gorm.DB
+// App struct to hold dependencies
+type App struct {
+	DB *gorm.DB
+}
 
 // Sign up handler
-func register(c *gin.Context) {
+func (app *App) register(c *gin.Context) {
 	//Get email and password from req body
 
 	var body struct {
@@ -47,7 +50,19 @@ func register(c *gin.Context) {
 
 	user := models.User{Username: body.Username, Email: &body.Email, Password: string(hashedpassword)}
 
-	result := db.Create(&user)
+	// Log the received user data
+	log.Printf("Received user data: %+v", user)
+
+	// Check if the db variable is not nil
+	if app.DB == nil {
+		log.Println("Database connection is not initialized")
+		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database connection is not initialized"})
+		return
+	}
+	result := app.DB.Create(&user)
+
+	// Log successful user creation
+	log.Printf("User created: %+v", user)
 
 	if result.Error != nil {
 		c.JSON(http.StatusBadRequest, gin.H{
@@ -70,7 +85,7 @@ func register(c *gin.Context) {
 /*
 login handler. Parses a form and checks for specific data
 */
-func login(c *gin.Context) {
+func (app *App) login(c *gin.Context) {
 	// parse email and password from body
 	var body struct {
 		Email    string `json:"email" binding:"required,email"`
@@ -88,7 +103,7 @@ func login(c *gin.Context) {
 	//Get user from database
 
 	var user models.User
-	result := db.Where("email =?", body.Email).First(&user)
+	result := app.DB.Where("email =?", body.Email).First(&user)
 
 	if result.Error != nil {
 		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
@@ -140,8 +155,9 @@ func login(c *gin.Context) {
 		"token":   tokenString,
 	})
 
-	// Redirect to profile page
-	c.Redirect(http.StatusSeeOther, "/profile")
+	// 	// Redirect to profile page
+	// 	c.Redirect(http.StatusSeeOther, "/profile")
+	//
 }
 
 // logout handler
@@ -168,20 +184,30 @@ func main() {
 		Port:     os.Getenv("DB_PORT"),
 		Password: os.Getenv("DB_PASS"),
 		User:     os.Getenv("DB_USER"),
-		SSLMode:  os.Getenv("DB_SSLMODE"),
 		DBName:   os.Getenv("DB_NAME"),
+		SSLMode:  os.Getenv("DB_SSLMODE"),
 	}
+
+	log.Printf("DB_HOST: %s", os.Getenv("DB_HOST"))
+	log.Printf("DB_PORT: %s", os.Getenv("DB_PORT"))
+	log.Printf("DB_USER: %s", os.Getenv("DB_USER"))
+	log.Printf("DB_PASS: %s", os.Getenv("DB_PASS"))
+	log.Printf("DB_NAME: %s", os.Getenv("DB_NAME"))
+	log.Printf("DB_SSLMODE: %s", os.Getenv("DB_SSLMODE"))
 
 	db, err := storage.NewConnection(config)
 
 	if err != nil {
 		log.Fatal("Error connecting to database", err)
 	}
+	log.Println(("Database connection established"))
 
 	err = models.MigrateUser(db)
 	if err != nil {
 		log.Fatal("User Database could not be migrated", err)
 	}
+
+	app := &App{DB: db}
 
 	//GET Request
 	r.GET("/home", func(c *gin.Context) {
@@ -189,9 +215,9 @@ func main() {
 	})
 
 	//login
-	r.POST("/login", login)
+	r.POST("/login", app.login)
 	//sign up
-	r.POST("/register", register)
+	r.POST("/register", app.register)
 
 	r.Run(":" + os.Getenv("PORT"))
 

@@ -26,8 +26,15 @@ function Login(){
     React.createElement(FaEye, { onClick: function() { setShowPassword(!showPassword); } })
 } 
         </div>
-        </form>
+        <div className = "login-button">
+         <button type="button"><a href="#"> Log In </a></button>
         </div>
+        </form>
+        <p className="register-main">
+            No Account. <a href="#">Sign Up! </a>
+        </p>
+        </div>
+        
     )
 }
 

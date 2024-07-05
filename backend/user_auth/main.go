@@ -77,9 +77,6 @@ func (app *App) register(c *gin.Context) {
 		"user":    user.Username,
 	})
 
-	// Redirect to login page
-	c.Redirect(http.StatusSeeOther, "/login")
-
 }
 
 /*
@@ -150,23 +147,22 @@ func (app *App) login(c *gin.Context) {
 	c.SetCookie("Authorization", tokenString, 3600*24*30, "", "", true, true)
 
 	//send it as a response
-	c.JSON(http.StatusOK, gin.H{
+	c.IndentedJSON(http.StatusOK, gin.H{
 		"message": "Successfully logged in",
 		"token":   tokenString,
 	})
 
-	// 	// Redirect to profile page
-	// 	c.Redirect(http.StatusSeeOther, "/profile")
-	//
 }
 
 // logout handler
-func Logout(c *gin.Context) {
+func (app *App) logout(c *gin.Context) {
 	//Clear cookie
 	c.SetCookie("Authorization", "", -1, "", "", false, true)
 
-	//Redirect to login page
-	c.Redirect(http.StatusSeeOther, "/login")
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"message": "successfully logged user out",
+	})
+
 }
 
 func main() {
@@ -178,7 +174,10 @@ func main() {
 
 	if err != nil {
 		log.Fatal("Error loading .env file", err)
+	} else {
+		log.Println(".env file loaded successfully.")
 	}
+
 	config := &storage.Config{
 		Host:     os.Getenv("DB_HOST"),
 		Port:     os.Getenv("DB_PORT"),
@@ -188,36 +187,29 @@ func main() {
 		SSLMode:  os.Getenv("DB_SSLMODE"),
 	}
 
-	log.Printf("DB_HOST: %s", os.Getenv("DB_HOST"))
-	log.Printf("DB_PORT: %s", os.Getenv("DB_PORT"))
-	log.Printf("DB_USER: %s", os.Getenv("DB_USER"))
-	log.Printf("DB_PASS: %s", os.Getenv("DB_PASS"))
-	log.Printf("DB_NAME: %s", os.Getenv("DB_NAME"))
-	log.Printf("DB_SSLMODE: %s", os.Getenv("DB_SSLMODE"))
-
 	db, err := storage.NewConnection(config)
 
 	if err != nil {
 		log.Fatal("Error connecting to database", err)
+	} else {
+		log.Println(("Database connection established"))
 	}
-	log.Println(("Database connection established"))
 
 	err = models.MigrateUser(db)
 	if err != nil {
 		log.Fatal("User Database could not be migrated", err)
+	} else {
+		log.Println("User Database migrated successfully.")
 	}
 
 	app := &App{DB: db}
 
-	//GET Request
-	r.GET("/home", func(c *gin.Context) {
-		c.JSON(http.StatusOK, gin.H{"message": "Welcome to Predictive Care API"})
-	})
-
-	//login
+	//login user
 	r.POST("/login", app.login)
-	//sign up
+	//register user
 	r.POST("/register", app.register)
+	//logout user
+	r.GET("/logout", app.logout)
 
 	r.Run(":" + os.Getenv("PORT"))
 

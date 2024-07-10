@@ -1,1397 +1,562 @@
 [
     {
-        "columns": [
-            "Proverbs",
-            "Meaning "
-        ],
-        "index": [
-            0,
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10,
-            11,
-            12,
-            13,
-            14,
-            15,
-            16,
-            17,
-            18,
-            19,
-            20,
-            21,
-            22,
-            23,
-            24,
-            25,
-            26,
-            27,
-            28,
-            29,
-            30,
-            31,
-            32,
-            33,
-            34,
-            35,
-            36,
-            37,
-            38,
-            39,
-            40,
-            41,
-            42,
-            43,
-            44,
-            45,
-            46,
-            47,
-            48,
-            49,
-            50,
-            51,
-            52,
-            53,
-            54,
-            55,
-            56,
-            57,
-            58,
-            59,
-            60,
-            61,
-            62,
-            63,
-            64,
-            65,
-            66,
-            67,
-            68,
-            69,
-            70,
-            71,
-            72,
-            73,
-            74,
-            75,
-            76,
-            77,
-            78,
-            79,
-            80,
-            81,
-            82,
-            83,
-            84,
-            85,
-            86,
-            87,
-            88,
-            89,
-            90,
-            91,
-            92,
-            93,
-            94,
-            95,
-            96,
-            97,
-            98,
-            99,
-            100,
-            101,
-            102,
-            103,
-            104,
-            105,
-            106,
-            107,
-            108,
-            109,
-            110,
-            111,
-            112,
-            113,
-            114,
-            115,
-            116,
-            117,
-            118,
-            119,
-            120,
-            121,
-            122,
-            123,
-            124,
-            125,
-            126,
-            127,
-            128,
-            129,
-            130,
-            131,
-            132,
-            133,
-            134,
-            135,
-            136,
-            137,
-            138,
-            139,
-            140,
-            141,
-            142,
-            143,
-            144,
-            145,
-            146,
-            147,
-            148,
-            149,
-            150,
-            151,
-            152,
-            153,
-            154,
-            155,
-            156,
-            157,
-            158,
-            159,
-            160,
-            161,
-            162,
-            163,
-            164,
-            165,
-            166,
-            167,
-            168,
-            169,
-            170,
-            171,
-            172,
-            173,
-            174,
-            175,
-            176,
-            177,
-            178,
-            179,
-            180,
-            181,
-            182,
-            183,
-            184,
-            185,
-            186,
-            187,
-            188,
-            189,
-            190,
-            191,
-            192,
-            193,
-            194,
-            195,
-            196,
-            197,
-            198,
-            199,
-            200,
-            201,
-            202,
-            203,
-            204,
-            205,
-            206,
-            207,
-            208,
-            209,
-            210,
-            211,
-            212,
-            213,
-            214,
-            215,
-            216,
-            217,
-            218,
-            219,
-            220,
-            221,
-            222,
-            223,
-            224,
-            225,
-            226,
-            227,
-            228,
-            229,
-            230,
-            231,
-            232,
-            233,
-            234,
-            235,
-            236,
-            237,
-            238,
-            239,
-            240,
-            241,
-            242,
-            243,
-            244,
-            245,
-            246,
-            247,
-            248,
-            249,
-            250,
-            251,
-            252,
-            253,
-            254,
-            255,
-            256,
-            257,
-            258,
-            259,
-            260,
-            261,
-            262,
-            263,
-            264,
-            265,
-            266,
-            267,
-            268,
-            269,
-            270,
-            271,
-            272,
-            273,
-            274,
-            275,
-            276
-        ],
-        "data": [
-            [
-                "a bird that flies off the earth and lands on an anthill is still on the ground",
-                "It is good to stay humble and remember your origins"
-            ],
-            [
-                "only a fool tests the depth of a river with no feet",
-                "You can tell someone is a fool by their actions"
-            ],
-            [
-                "examine what is said, not who is speaking",
-                "Pay attention to what people do not what they say"
-            ],
-            [
-                "if you want to know the end, look at the beginning",
-                "Success is determined by how you start"
-            ],
-            [
-                "knowledge is a garden if it isn't cultivated, you can't harvest it",
-                "To gain knowledge, one must consistently study"
-            ],
-            [
-                "a roaring lion kills no game",
-                "You cannot gain anything by sitting around talking about it. You must get up and work for it."
-            ],
-            [
-                "do not look where you feel look where you slipped",
-                "Look for the cause of a problem and not the symptoms"
-            ],
-            [
-                "restless feet might walk you into a snake pit",
-                "It is easy for a person to get into trouble when he or she is not busy doing something."
-            ],
-            [
-                "no shortcuts exist to the top of a palm tree",
-                "If we want to reach the top of our respective goals, we will need to put in the work"
-            ],
-            [
-                "when two elephants fight, it is the grass that gets hurt",
-                "When powerful forces go to war, it's their people who are hurt. Those who never asked for the conflict in the first place are caught, and killed, in the crossfire."
-            ],
-            [
-                "tomorrow belongs to people who prepare for it today",
-                "Our actions in the present determine if we achieve our goals in the future"
-            ],
-            [
-                "no medicine exists that can cure hatred",
-                "Hatred is a complex and powerful emotion that can be incredle to overcome"
-            ],
-            [
-                "all monkeys cannot hang from the same branch",
-                "Something good will come out of a difficult situation"
-            ],
-            [
-                "he who digs a grave for his enemy might as well be digging one for himself",
-                "Someone that plans harm or misfortune for others may also inadvertently be the recipient of that same misfortune."
-            ],
-            [
-                "even the lion protects himself against flies",
-                "Always be on your guard and do not let yourself be taken advantage of by anyone or anything. "
-            ],
-            [
-                "however long the night, the dawn will break",
-                "No matter how difficult or dark the current circumstances may seem, there is always the promise of a better future ahead."
-            ],
-            [
-                "if you heal the leg of a person, do not be surprised if they use it to run away",
-                "Even when we help others, they may not always be grateful and may take advantage of our kindness"
-            ],
-            [
-                "the axe forgets but the tree remembers",
-                "A person hurt in a situation remembers, whereas the person who hurt the other, forgets."
-            ],
-            [
-                "once you carry your own water, you'll remember every drop",
-                "Experiences in life deepen our appreciation for things we often overlook."
-            ],
-            [
-                "don't set sail on someone else's star",
-                "Just because someone has been successful at doing something does not mean you will be successful at doing the same thing."
-            ],
-            [
-                "to try and to fail is not laziness",
-                "Don't be discouraged when you fail, as long as you are.\u00a0doing something. Use failure as a driving force to push. you forward."
-            ],
-            [
-                "seeing is different than being told",
-                "Don't mistake hearsay from the truth."
-            ],
-            [
-                "no matter how beautiful and well crafted a coffin might look, it will not make anyone wish for death",
-                "Material possessions are not as important as life itself."
-            ],
-            [
-                "wood already touched by fire is not hard to set alight",
-                "With the right preparatory work and conditions, a difficult task can become much easier."
-            ],
-            [
-                "confiding a secret to an unworthy person is like carrying grain in a bag with a hole",
-                "It is important to choose trustworthy friends."
-            ],
-            [
-                "a feeble effort will not fulfill the self",
-                "Doing your best is sufficient."
-            ],
-            [
-                "having a good discussion is like having riches",
-                "Engaging in meaningful conversations and exchanging ideas can be as valuable as wealth or material riches."
-            ],
-            [
-                "don't think there are no crocodiles just because the water is calm",
-                "Always be aware of your surroundings and different situations."
-            ],
-            [
-                "he who refuses to obey cannot command",
-                "A good leader should first learn how to follow orders in order to be successful."
-            ],
-            [
-                "do not call a dog with a whip in your hand",
-                "Approach things with a calm and open mindset."
-            ],
-            [
-                "one falsehood spoils a thousand truths",
-                "No matter what the situation, it's always better to tell the truth."
-            ],
-            [
-                "the earth is a beehive, we all enter by the same door",
-                "Regardless of our differences, we all share a common origin and destiny."
-            ],
-            [
-                "rain does not fall on one roof alone",
-                "Trouble comes to everyone at one point or another."
-            ],
-            [
-                "however far a stream flows, it doesn't forget its origin",
-                "Always remember your roots and respect your traditions no matter where you are."
-            ],
-            [
-                "if you think you're too small to make a difference, try spending the night with a mosquito",
-                "Even the most seemingly insignificant beings can make quite a difference to someone.\u00a0"
-            ],
-            [
-                "if there is no enemy within, the enemy outside can do no harm",
-                "Our greatest enemy is often ourselves."
-            ],
-            [
-                "the eye never forgets what the heart has seen",
-                "The experiences that deeply affect us emotionally are remembered vividly and lastingly."
-            ],
-            [
-                "no person is born great great people become great when others are sleeping",
-                "Greatness is earned through effort, not inherited at birth."
-            ],
-            [
-                "when an old man dies, a library is burned with him",
-                "When an elder passes away, valuable knowledge is lost forever."
-            ],
-            [
-                "truth should be in love and love in truth",
-                "Genuine love and truth are intertwined and inseparable."
-            ],
-            [
-                "when you marry a monkey for his wealth, the money goes but the monkey remains",
-                "Marrying for wealth may lead to loss, but the undesirable traits remain."
-            ],
-            [
-                "where there is love, there is no darkness",
-                "Love illuminates and dispels darkness."
-            ],
-            [
-                "it is better to be loved than to be feared",
-                "Being loved brings greater happiness than being feared."
-            ],
-            [
-                "when one is in love, a cliff becomes a meadow",
-                "Love transforms obstacles into opportunities."
-            ],
-            [
-                "he who loves, loves you with your dirt",
-                "True love accepts imperfections without judgment."
-            ],
-            [
-                "if love is a sickness, patience is the remedy",
-                "Patience is the cure for love's challenges."
-            ],
-            [
-                "to love someone who doesn't love you is like shaking a tree to make the dew drops fall",
-                "Unrequited love is futile and unrewarding."
-            ],
-            [
-                "if the full moon loves you, why worry about the stars?",
-                "Focus on the love you have, not on what you lack."
-            ],
-            [
-                "don't be so in love that you can't tell when it's raining",
-                "Love remains steadfast even amid change."
-            ],
-            [
-                "even as the archer loves the arrow that flies, so too he loves the bow that remains constant in his hands",
-                "Love is indiscriminate and falls where it may."
-            ],
-            [
-                "love, like rain, does not choose the grass on which it falls",
-                "Treat your loved ones with respect and consistency."
-            ],
-            [
-                "do not treat your loved one like a swinging door: you are fond of it but you push it back and forth",
-                "Love is deaf to gossip and hears only the truth."
-            ],
-            [
-                "love doesn't listen to rumors",
-                "True love values both the container and its contents."
-            ],
-            [
-                "one who loves the vase, loves also what is inside",
-                "If someone loves or appreciates something superficial, they also value what is deeper or more meaningful."
-            ],
-            [
-                "one who marries for love alone will have bad days but good nights",
-                "Marrying for love alone may bring challenges during the day, but intimacy and connection at night."
-            ],
-            [
-                "love for something makes a man blind and deaf",
-                "When someone is deeply attached or infatuated with something, they may overlook its faults or fail to hear criticism."
-            ],
-            [
-                "let your love be like the misty rain, coming softly but flooding the river",
-                "Love should be gentle and gradual but have a powerful and transformative effect over time."
-            ],
-            [
-                "the quarrel of lovers is the renewal of love",
-                "Disagreements and conflicts between lovers can ultimately strengthen their relationship by resolving issues and fostering understanding."
-            ],
-            [
-                "don't try to make someone hate the person he loves for he will go on loving but he will hate you",
-                "Trying to turn someone against the person they love will only create resentment towards you, not diminish their love for the other person."
-            ],
-            [
-                "if a woman doesn't love you, she calls you brother",
-                "If a woman doesn't have romantic feelings for a man, she may consider him only as a friend or brother."
-            ],
-            [
-                "love is a despot who spares no one",
-                "Love can be powerful and controlling, affecting everyone regardless of their status or position."
-            ],
-            [
-                "love doesn't rely on physical features",
-                "Love is not dependent on physical appearance; it goes beyond superficial features."
-            ],
-            [
-                "if anyone makes you laugh, it is not always because they love you",
-                "If someone makes you laugh, it doesn't necessarily mean they love you; laughter can have various motivations."
-            ],
-            [
-                "you know who you love but you can't know who loves you",
-                "While you may know who you love, it's difficult to know who loves you in return."
-            ],
-            [
-                "love is a painkiller",
-                "Love can provide comfort and relief from pain."
-            ],
-            [
-                "a happy man marries the girl he loves; a happier man loves the girl he married",
-                "Finding happiness in the person you marry brings greater fulfillment than simply marrying someone you love."
-            ],
-            [
-                "one who plants grapes by the roadside, and one who marries a pretty woman, share the same problem",
-                "Pursuing superficial things can lead to common problems and challenges."
-            ],
-            [
-                "if money were to be found up in the trees, most people would be married to monkeys",
-                "Many people prioritize wealth over other qualities when choosing a partner."
-            ],
-            [
-                "every kind of love is love, but self-love is supreme among them",
-                "While various forms of love exist, self-love is the most important."
-            ],
-            [
-                "true love means what's mine is yours",
-                "True love involves sharing and sacrifice."
-            ],
-            [
-                "it's better to fall from a tree and break your back than to fall in love and break your heart",
-                "The pain of a broken heart can be worse than physical injury."
-            ],
-            [
-                "he may say that he loves you, wait and see what he does for you",
-                "Actions speak louder than words when it comes to demonstrating love."
-            ],
-            [
-                "it is difficult for two long-nosed lovers to kiss",
-                "Sometimes, physical differences can complicate expressions of love."
-            ],
-            [
-                "a fish and bird may fall in love but the two cannot build a home together",
-                "Love doesn't hide vulnerabilities or flaws."
-            ],
-            [
-                "lovers do not hide their nakedness",
-                "Love can change one's perception of the world, making challenges seem less daunting."
-            ],
-            [
-                "when one is in love, a mountain top becomes a flat field",
-                "Wisdom is valuable and can lead to success."
-            ],
-            [
-                "wisdom is wealth",
-                "Wisdom is vast and cannot be fully grasped by one individual."
-            ],
-            [
-                "wisdom is like a baobab tree; no one individual can embrace it",
-                "A wise person listens more than they speak."
-            ],
-            [
-                "the fool speaks, the wise man listens",
-                "Wisdom is acquired over time through experience and reflection."
-            ],
-            [
-                "wisdom does not come overnight",
-                "Wise individuals are calm and tranquil."
-            ],
-            [
-                "the heart of the wise man lies quiet like limpid water",
-                "Wisdom is shared and spread among people."
-            ],
-            [
-                "wisdom is like fire people take it from others",
-                "Problem-solving often requires wisdom."
-            ],
-            [
-                "only a wise person can solve a difficult problem",
-                "Knowledge without understanding or insight is worthless."
-            ],
-            [
-                "knowledge without wisdom is like water in the sand",
-                "In times of crisis, wise individuals find solutions, while fools create further problems."
-            ],
-            [
-                "in the moment of crisis, the wise build bridges, and the foolish build dams",
-                "Pride can hinder the acquisition of wisdom."
-            ],
-            [
-                "if you are filled with pride, then you will have no room for wisdom",
-                "Wise individuals find solutions to challenges."
-            ],
-            [
-                "a wise person will always find a way",
-                "Wisdom is not innate; it's acquired through learning and experience."
-            ],
-            [
-                "nobody is born wise",
-                "A single day of wise decisions can surpass a lifetime of foolishness."
-            ],
-            [
-                "a man who uses force is afraid of reasoning",
-                "Mistakes can be valuable learning experiences."
-            ],
-            [
-                "wisdom is not like money to be tied up and hidden",
-                "The wisdom of others can prevent foolishness."
-            ],
-            [
-                "one who causes others misfortune also teaches them wisdom",
-                "By the time a fool learns, others may have moved on."
-            ],
-            [
-                "a fool cannot untie the knot tied by a wise man",
-                "Ignoring facts can lead to unintended consequences."
-            ],
-            [
-                "knowledge without wisdom is like water in the sand",
-                "Proverbs are designed to impart wisdom to those who listen."
-            ],
-            [
-                "wisdom does not come overnight",
-                "Actions don't always indicate agreement or consent."
-            ],
-            [
-                "one day in the life of a wise man is worth a fool's entire life",
-                "Wise individuals think before they speak."
-            ],
-            [
-                "to get lost is to learn the way",
-                "Ignorance can be more costly than education."
-            ],
-            [
-                "other people's wisdom prevents the king from being called a fool",
-                "Your body is a vessel for learning and growth."
-            ],
-            [
-                "by the time the fool has learned the game, the players have dispersed",
-                "A wise person speaks thoughtfully, whereas a fool speaks impulsively."
-            ],
-            [
-                "if you close your eyes to facts, you will learn through accidents",
-                "Wise individuals plan carefully to avoid unnecessary risks."
-            ],
-            [
-                "the wise create proverbs for fools to learn, not to repeat",
-                "Adversity can be a powerful teacher."
-            ],
-            [
-                "just because the lizard nods his head, doesn't mean he's in agreement",
-                "Words can bring about destruction if spoken carelessly."
-            ],
-            [
-                "a wise man fills his head before emptying his mouth",
-                "Ancestral wisdom is often invaluable."
-            ],
-            [
-                "if you think education is expensive, try ignorance",
-                "It's better to take decisive action than to hesitate."
-            ],
-            [
-                "your body is a temple of knowledge",
-                "Deeds are more meaningful than words alone."
-            ],
-            [
-                "a fool has to say something a wise person has something to say",
-                "People have different areas of expertise and knowledge."
-            ],
-            [
-                "the wise man never takes a step too long for his leg",
-                "Wise individuals learn from their mistakes and don't repeat them."
-            ],
-            [
-                "give advice, if people don't listen let adversity teach them",
-                "Family provides support and structure."
-            ],
-            [
-                "a man's ruin lies in his tongue",
-                "Unity within a family is essential for its strength."
-            ],
-            [
-                "no man can outwit their ancestors",
-                "Family bonds are resilient but can be flexible."
-            ],
-            [
-                "it is better to live as a lion for one day rather than years as a sheep",
-                "Harmony within the family is a measure of success."
-            ],
-            [
-                "when deed speaks, words are nothing",
-                "Cooperation among many leads to success."
-            ],
-            [
-                "he who does not know one thing knows another",
-                "Children's development is influenced by their upbringing."
-            ],
-            [
-                "a wise person doesn't fall down the same hill twice",
-                "Children often imitate what they see."
-            ],
-            [
-                "a family is like a forest, when you are outside it is dense, when you are inside you see that each tree has its place",
-                "Parents aim to provide their children with roots (foundation) and wings (opportunities)."
-            ],
-            [
-                "a united family eats from the same plate",
-                "Family members share resources and experiences."
-            ],
-            [
-                "a family tie is like a tree, it can bend but it cannot break",
-                "Even those in servitude have familial ties."
-            ],
-            [
-                "if i am in harmony with my family, that's success",
-                "Interfering in family disputes can be risky."
-            ],
-            [
-                "where there are many, nothing goes wrong",
-                "Family members are often more concerned about troublesome relatives than the individuals themselves."
-            ],
-            [
-                "a child is what you put into him",
-                "Educating women benefits entire families and communities."
-            ],
-            [
-                "when you show the child the moon, it sees only your finger",
-                "A good spouse contributes to the well-being of the family."
-            ],
-            [
-                "we desire to bequeath two things to our children; the first one is roots, the other one is wings",
-                "Women play a vital role in the household."
-            ],
-            [
-                "a real family eats from the same cornmeal",
-                "Parental influence extends beyond physical attributes."
-            ],
-            [
-                "even the maid has a family",
-                "Every mother sees her child as special."
-            ],
-            [
-                "don't meddle with a family feud",
-                "Community support is essential in raising children."
-            ],
-            [
-                "in a family if you have somebody who is troublesome it's the family members who are more worried than the troublesome member",
-                "Even a small space can accommodate many friends."
-            ],
-            [
-                "if you educate a man, you educate one person if you educate a woman, you educate a whole family",
-                "A husband protects and cherishes his wife."
-            ],
-            [
-                "a husband with a good wife will never be on the road without supplies",
-                "Parents prioritize the well-being of their offspring."
-            ],
-            [
-                "a home without a woman is like a barn without cattle",
-                "Collaboration leads to greater achievements than working alone."
-            ],
-            [
-                "parents give birth to the body of their children, but not always to their characters",
-                "Solidarity among people makes them stronger."
-            ],
-            [
-                "every beetle is a gazelle in the eyes of its mother",
-                "Brothers often share a special bond when they are equally successful."
-            ],
-            [
-                "a mother cannot give birth to something bigger than herself",
-                "While it's fine to dine with strangers, familial love should be preserved."
-            ],
-            [
-                "it takes a village to raise a child",
-                "Disownment from one's family is a rare occurrence."
-            ],
-            [
-                "a small house will hold a hundred friends",
-                "Mutual assistance among relatives can mitigate external challenges."
-            ],
-            [
-                "a woman is a flower in a garden; her husband is the fence around it",
-                "Misfortune affects families collectively."
-            ],
-            [
-                "the mother hen does not break its own eggs",
-                "The elderly care for the young, and vice versa, in a cycle of support."
-            ],
-            [
-                "if you want to go fast, go alone if you want to go far, go together",
-                "Family disputes can lead to inheritance issues."
-            ],
-            [
-                "sticks in a bundle are unbreakable",
-                "Children are a source of joy and fulfillment."
-            ],
-            [
-                "brothers love each other when they are equally rich",
-                "Private family matters should be kept within the household."
-            ],
-            [
-                "dine with a stranger but save your love for your family",
-                "Children respect their parents despite any flaws."
-            ],
-            [
-                "there is no fool who is disowned by his family",
-                "Families should prioritize each other's well-being."
-            ],
-            [
-                "if relatives help each other, what evil can hurt them?",
-                "Familial conflicts can be challenging to resolve."
-            ],
-            [
-                "he who earns calamity, eats it with his family",
-                "The ruler's actions can influence the entire nation."
-            ],
-            [
-                "the old woman looks after the child to grow its teeth and the young one in turn looks after the old woman when she loses her teeth",
-                "Humility is essential for maintaining relationships."
-            ],
-            [
-                "when brothers fight to the death, a stranger inherits their father's estate",
-                "Cooperation and collaboration lead to success."
-            ],
-            [
-                "children are the reward of life",
-                "Learning from past mistakes is important for growth."
-            ],
-            [
-                "home affairs are not talked about on the public square",
-                "Educating children is a communal effort."
-            ],
-            [
-                "a child does not laugh at the ugliness of his mother",
-                "Personal experiences shape one's perspective."
-            ],
-            [
-                "family must look out for family",
-                "Mutual respect is crucial for peaceful coexistence."
-            ],
-            [
-                "it is hard to cure madness that originates in the family",
-                "Proverbs contain wisdom that can resolve disputes."
-            ],
-            [
-                "when a bitter woman takes over the house, the family she rules is doomed",
-                "Judging by actions is more accurate than judging by words."
-            ],
-            [
-                "a bird will always use another bird's feathers to feather its own nest",
-                "Patience and steady progress lead to success."
-            ],
-            [
-                "a person is a person because of other persons",
-                "Rushing often leads to mistakes."
-            ],
-            [
-                "a man's grave is by the roadside",
-                "Responding to fire with fire can be effective."
-            ],
-            [
-                "he that digs up a grave for his enemy, may be digging it for himself",
-                "Retaliation in kind is a common response to offense."
-            ],
-            [
-                "a bad name is like a stigma",
-                "Individuals are shaped by their interactions with others."
-            ],
-            [
-                "by the time the fool has learned the game, the players have dispersed",
-                "Collaboration and collective effort yield stronger results."
-            ],
-            [
-                "do not call the forest that shelters you a jungle",
-                "No one can thrive in isolation."
-            ],
-            [
-                "even though the old man is strong and hearty, he will not live forever",
-                "Progress comes gradually through steady effort."
-            ],
-            [
-                "fire and gunpowder do not sleep together",
-                "Intellect is valuable and can improve one's life."
-            ],
-            [
-                "hunger is felt by a slave and hunger is felt by a king",
-                "Consistent effort leads to significant achievements."
-            ],
-            [
-                "if you are in hiding, don't light a fire",
-                "A journey of a thousand miles begins with a single step."
-            ],
-            [
-                "it is mr. old-man-monkey who marries mrs. old-woman-monkey",
-                "Anger can lead to negative outcomes."
-            ],
-            [
-                "it is no shame at all to work for money",
-                "One's upbringing influences their behavior."
-            ],
-            [
-                "it is the calm and silent water that drowns a man",
-                "Recognizing patterns is crucial for avoiding mistakes."
-            ],
-            [
-                "it is the fool's sheep that break loose twice",
-                "Family ties are strong and enduring."
-            ],
-            [
-                "it's a bad child who does not take advice",
-                "Appearance can be deceptive."
-            ],
-            [
-                "money is sharper than a sword",
-                "Etiquette is important, especially during meals."
-            ],
-            [
-                "no one tests the depth of a river with both feet",
-                "Self-praise is often viewed negatively."
-            ],
-            [
-                "one cannot both feast and become rich",
-                "Hard work is necessary for success."
-            ],
-            [
-                "one falsehood spoils a thousand truths",
-                "A single lie can discredit numerous truths or undermine trust in vast information."
-            ],
-            [
-                "only when you have crossed the river, can you say the crocodile has a lump on his snout",
-                "Understanding comes from direct experience; judgment should be reserved until one has firsthand knowledge."
-            ],
-            [
-                "rain beats a leopard's skin, but it does not wash out the spots",
-                "External influences may impact a person, but they cannot fundamentally change who they are."
-            ],
-            [
-                "the moon moves slowly, but it crosses the town",
-                "Progress takes time, but eventual achievement is certain."
-            ],
-            [
-                "the poor man and the rich man do not play together",
-                "Socio-economic disparities often create divides that hinder social interaction."
-            ],
-            [
-                "the ruin of a nation begins in the homes of its people",
-                "Societal problems often stem from issues within individual households or families."
-            ],
-            [
-                "there is no medicine to cure hatred",
-                "Hatred cannot be easily eradicated or treated with conventional means."
-            ],
-            [
-                "two small antelopes can beat a big one",
-                "Collective effort can overcome individual strength or advantage."
-            ],
-            [
-                "what is bad luck for one man is good luck for another",
-                "Perspectives on fortune vary based on individual circumstances."
-            ],
-            [
-                "when a king has good counselors, his reign is peaceful",
-                "Wise advisors contribute to effective leadership and stability."
-            ],
-            [
-                "when a man is coming toward you, you need not say: 'come here'",
-                "Actions speak louder than words; there's no need to state the obvious."
-            ],
-            [
-                "when a man is wealthy, he may wear an old cloth",
-                "Wealth brings comfort and the freedom to disregard societal expectations."
-            ],
-            [
-                "when a woman is hungry, she says, 'roast something for the children that they might eat'",
-                "A woman prioritizes her family's needs, even when she herself is hungry."
-            ],
-            [
-                "when the cock is drunk, he forgets about the hawk",
-                "Overconfidence can lead to overlooking potential dangers."
-            ],
-            [
-                "when the fool is told a proverb, its meaning has to be explained to him",
-                "Some individuals lack the insight to understand wisdom without explanation."
-            ],
-            [
-                "when you are rich, you are hated; when you are poor, you are despised",
-                "Jealousy and disdain often accompany both wealth and poverty."
-            ],
-            [
-                "when you follow in the path of your father, you learn to walk like him",
-                "Children often emulate their parents' behaviors and values."
-            ],
-            [
-                "wood already touched by fire is not hard to set alight",
-                "Once a precedent is set, it's easier to repeat or continue similar actions."
-            ],
-            [
-                "a chick that will grow into a cock can be spotted the very day it hatches",
-                "Certain traits or characteristics are evident from an early age."
-            ],
-            [
-                "a child's fingers are not scalded by a piece of hot yam which his mother puts into his palm",
-                "A mother protects her child from harm, even when she herself is affected."
-            ],
-            [
-                "an old woman is always uneasy when dry bones are mentioned in a proverb",
-                "Experience brings awareness of potential threats or uncomfortable truths."
-            ],
-            [
-                "a man who pays respect to the great paves the way for his own greatness",
-                "Showing respect to those in authority or of higher status can lead to personal success."
-            ],
-            [
-                "a proud heart can survive a general failure because such a failure does not prick its pride",
-                "Pride can shield an individual from the full impact of failure."
-            ],
-            [
-                "as the dog said, 'if i fall down for you and you fall down for me, it is playing'",
-                "Reciprocity is essential for true cooperation and mutual benefit."
-            ],
-            [
-                "a wise man who knows proverbs, reconciles difficulties (yoruba)",
-                "Proverbs offer insights that can help resolve conflicts and solve problems."
-            ],
-            [
-                "do not look where you fell, but where you slipped",
-                "Focus on identifying the root cause of a problem, rather than dwelling on its immediate effects."
-            ],
-            [
-                "if a child washes his hands he could eat with kings",
-                "Good habits and hygiene can lead to opportunities for advancement."
-            ],
-            [
-                "if you don't stand for something, you will fall for something",
-                "Having principles and beliefs prevents being swayed or misled by others."
-            ],
-            [
-                "it takes a whole village to raise a child",
-                "Parenting and upbringing are collaborative efforts that involve the entire community."
-            ],
-            [
-                "looking at a king's mouth one would never think he sucked his mother's breast",
-                "One's appearance or status can mask their humble origins."
-            ],
-            [
-                "people should not talk while they are eating or pepper may go down the wrong way",
-                "It's important to observe proper etiquette to avoid discomfort or mishaps."
-            ],
-            [
-                "the lizard that jumped from the high iroko tree to the ground said he would praise himself if no one else did",
-                "Self-praise often stems from a lack of external validation or recognition."
-            ],
-            [
-                "the mouth which eats does not talk",
-                "Actions speak louder than words; it's more important to do than to say."
-            ],
-            [
-                "the sun will shine on those who stand before it shines on those who kneel under them",
-                "Success favors those who take initiative and assert themselves."
-            ],
-            [
-                "those whose palm-kernels were cracked for them by a benevolent spirit should not forget to be humble",
-                "One should remain grateful for assistance or good fortune, rather than becoming arrogant."
-            ],
-            [
-                "when a man says yes, his chi (personal god) says yes also",
-                "Agreement or alignment with one's destiny leads to favorable outcomes."
-            ],
-            [
-                "when the moon is shining the cripple becomes hungry for a walk",
-                "External conditions or circumstances can inspire action or ambition."
-            ],
-            [
-                "you can tell a ripe corn by its look",
-                "Experience allows one to recognize qualities or attributes without needing further confirmation."
-            ],
-            [
-                "you must judge a man by the work of his hands",
-                "Judging someone by their actions and accomplishments is more accurate than judging by their words."
-            ],
-            [
-                "slow, slow is the way to go/slowness is the better locomotion",
-                "Progressing steadily and cautiously is better than rushing."
-            ],
-            [
-                "being steady and keen is important when performing given tasks hurry, hurry, has no blessings",
-                "Patience and focus lead to success, while haste leads to mistakes."
-            ],
-            [
-                "more haste less speed",
-                "Rushing often results in errors and delays."
-            ],
-            [
-                "the remedy for fire is fire",
-                "Sometimes, confronting a problem directly is the best solution."
-            ],
-            [
-                "tit for tat",
-                "Responding to an action with a similar action."
-            ],
-            [
-                "a person is people",
-                "Emphasizes the shared humanity among individuals."
-            ],
-            [
-                "no man is an island",
-                "Everyone depends on others in some way."
-            ],
-            [
-                "nine is near ten",
-                "Indicates nearing completion or fullness."
-            ],
-            [
-                "intelligence is an asset. knowledge can be used to better ones life",
-                "Intelligence is valuable, but applying knowledge is crucial for improvement."
-            ],
-            [
-                "little by little fills up the measure",
-                "Incremental progress leads to significant achievements."
-            ],
-            [
-                "a great journey is begun by a single mile",
-                "Every significant accomplishment starts with a small step."
-            ],
-            [
-                "anger brings damage",
-                "Acting out of anger leads to negative consequences."
-            ],
-            [
-                "the child of a snake is a snake",
-                "Traits or behaviors are often inherited."
-            ],
-            [
-                "like father like son",
-                "Children often resemble their parents."
-            ],
-            [
-                "one falsehood spoils a thousand truths",
-                "A single lie undermines credibility."
-            ],
-            [
-                "only when you have crossed the river, can you say the crocodile has a lump on his snout",
-                "Don't underestimate a danger until it's fully confronted."
-            ],
-            [
-                "rain beats a leopard's skin, but it does not wash out the spots",
-                "Adversity may affect someone superficially, but it does not change their true character."
-            ],
-            [
-                "the moon moves slowly, but it crosses the town",
-                "Progress may seem slow, but with patience and persistence, significant achievements can be made."
-            ],
-            [
-                "the poor man and the rich man do not play together",
-                "Social classes often remain separate, indicating societal divisions and inequality."
-            ],
-            [
-                "the ruin of a nation begins in the homes of its people",
-                "Societal problems often originate from individual behaviors and values within families and communities."
-            ],
-            [
-                "there is no medicine to cure hatred",
-                "Hatred is a deep-rooted emotion that cannot be easily eliminated or cured."
-            ],
-            [
-                "two small antelopes can beat a big one",
-                "Unity and cooperation can overcome formidable challenges."
-            ],
-            [
-                "what is bad luck for one man is good luck for another",
-                "Circumstances that are unfortunate for one person may benefit another, illustrating the subjective nature of fortune."
-            ],
-            [
-                "when a king has good counselors, his reign is peaceful",
-                "Wise advisors contribute to effective leadership and stability."
-            ],
-            [
-                "when a man is coming toward you, you need not say: 'come here'",
-                "Actions speak louder than words; unnecessary communication can be avoided."
-            ],
-            [
-                "when a man is wealthy, he may wear an old cloth",
-                "Wealth allows for certain liberties or eccentricities, such as not conforming to societal expectations."
-            ],
-            [
-                "when a woman is hungry, she says, 'roast something for the children that they might eat'",
-                "Responsibility for providing for others often takes precedence over personal needs or desires."
-            ],
-            [
-                "when the cock is drunk, he forgets about the hawk",
-                "Intoxication or unawareness can make someone vulnerable to danger."
-            ],
-            [
-                "when the fool is told a proverb, its meaning has to be explained to him",
-                "Some individuals lack understanding and require explanations for simple truths or sayings."
-            ],
-            [
-                "when you are rich, you are hated; when you are poor, you are despised",
-                "Jealousy and resentment exist regardless of social or financial status."
-            ],
-            [
-                "when you follow in the path of your father, you learn to walk like him",
-                "Children often adopt the behaviors and values of their parents or role models."
-            ],
-            [
-                "wood already touched by fire is not hard to set alight",
-                "Past experiences make one more susceptible to similar occurrences in the future."
-            ],
-            [
-                "a chick that will grow into a cock can be spotted the very day it hatches",
-                "Some individuals exhibit characteristics or potential from a young age."
-            ],
-            [
-                "a child's fingers are not scalded by a piece of hot yam which his mother puts into his palm",
-                "Parents protect and care for their children, ensuring their safety and well-being."
-            ],
-            [
-                "an old woman is always uneasy when dry bones are mentioned in a proverb",
-                "Certain topics or reminders of mortality can evoke discomfort or anxiety, especially in older individuals."
-            ],
-            [
-                "a man who pays respect to the great paves the way for his own greatness",
-                "Showing reverence towards accomplished individuals can inspire personal growth."
-            ],
-            [
-                "a proud heart can survive a general failure because such a failure does not prick its pride",
-                "Pride can shield someone from the emotional impact of failure or setback."
-            ],
-            [
-                "as the dog said, 'if i fall down for you and you fall down for me, it is playing'",
-                "Mutual cooperation or assistance is natural and reciprocal."
-            ],
-            [
-                "a wise man who knows proverbs, reconciles difficulties (yoruba)",
-                "Proverbs hold wisdom that can be applied to resolve conflicts or challenges."
-            ],
-            [
-                "do not look where you fell, but where you slipped",
-                "Focus on identifying the cause of a mistake rather than dwelling on the mistake itself."
-            ],
-            [
-                "if a child washes his hands he could eat with kings",
-                "Proper preparation and behavior can lead to opportunities for success and acceptance."
-            ],
-            [
-                "if you don't stand for something, you will fall for something",
-                "Having principles or convictions is essential for avoiding manipulation or deception."
-            ],
-            [
-                "it takes a whole village to raise a child",
-                "Parenting and upbringing are collective responsibilities that involve the entire community."
-            ],
-            [
-                "looking at a king's mouth one would never think he sucked his mother's breast",
-                "Appearances can be deceiving; one should not judge solely based on outward impressions."
-            ],
-            [
-                "people should not talk while they are eating or pepper may go down the wrong way",
-                "Certain actions or behaviors should be avoided in specific contexts to prevent mishaps or misunderstandings."
-            ],
-            [
-                "the lizard that jumped from the high iroko tree to the ground said he would praise himself if no one else did",
-                "Self-praise may be necessary when recognition from others is lacking."
-            ],
-            [
-                "the mouth which eats does not talk",
-                "Actions speak louder than words, and someone who benefits from a situation may remain silent."
-            ],
-            [
-                "the sun will shine on those who stand before it shines on those who kneel under them",
-                "Assertiveness and self-respect lead to success and recognition."
-            ],
-            [
-                "those whose palm-kernels were cracked for them by a benevolent spirit should not forget to be humble",
-                "Success obtained with the help of others should be acknowledged with humility."
-            ],
-            [
-                "when a man says yes, his chi (personal god) says yes also",
-                "Personal beliefs or convictions influence one's actions and decisions."
-            ],
-            [
-                "when the moon is shining the cripple becomes hungry for a walk",
-                "Positive circumstances can inspire and motivate individuals, regardless of their limitations."
-            ],
-            [
-                "you can tell a ripe corn by its look",
-                "Experience and intuition allow one to recognize qualities or characteristics without explicit evidence."
-            ],
-            [
-                "you must judge a man by the work of his hands",
-                "Assess someone based on their actions and accomplishments rather than mere appearances or promises."
-            ],
-            [
-                "slow, slow is the way to go/slowness is the better locomotion",
-                "Proceeding cautiously and steadily is preferable to rushing."
-            ],
-            [
-                "being steady and keen is important when performing given tasks hurry, hurry, has no blessings",
-                "Rushing or impatience often leads to mistakes and negative outcomes."
-            ],
-            [
-                "more haste less speed",
-                "Rushing leads to inefficiency and mistakes, ultimately slowing progress."
-            ],
-            [
-                "the remedy for fire is fire",
-                "Sometimes, a problem can only be solved by confronting it directly or using a similar approach."
-            ],
-            [
-                "tit for tat",
-                "Responding to an action with a similar action."
-            ],
-            [
-                "a person is people",
-                "Emphasizes the shared humanity among individuals."
-            ],
-            [
-                "no man is an island",
-                "Everyone depends on others in some way."
-            ],
-            [
-                "nine is near ten",
-                "Indicates nearing completion or fullness."
-            ],
-            [
-                "intelligence is an asset. knowledge can be used to better ones life",
-                "Intelligence is valuable, but applying knowledge is crucial for improvement."
-            ],
-            [
-                "little by little fills up the measure",
-                "Incremental progress leads to significant achievements."
-            ],
-            [
-                "a great journey is begun by a single mile",
-                "Every significant accomplishment starts with a small step."
-            ],
-            [
-                "anger brings damage",
-                "Acting out of anger leads to negative consequences."
-            ],
-            [
-                "the child of a snake is a snake",
-                "Traits or behaviors are often inherited."
-            ],
-            [
-                "like father like son",
-                "A child's character or behavior can be expected to resemble that of their parents."
-            ],
-            [
-                "the apple does not fall away from its tree",
-                "A child usually has a similar character or similar qualities to his or her parents."
-            ],
-            [
-                "habit is a skin",
-                "It's difficult to change habits once they are established."
-            ]
-        ]
+        "Proverbs": {
+            "0": "a bird that flies off the earth and lands on an anthill is still on the ground",
+            "1": "only a fool tests the depth of a river with no feet",
+            "2": "examine what is said, not who is speaking",
+            "3": "if you want to know the end, look at the beginning",
+            "4": "knowledge is a garden if it isn't cultivated, you can't harvest it",
+            "5": "a roaring lion kills no game",
+            "6": "do not look where you feel look where you slipped",
+            "7": "restless feet might walk you into a snake pit",
+            "8": "no shortcuts exist to the top of a palm tree",
+            "9": "when two elephants fight, it is the grass that gets hurt",
+            "10": "tomorrow belongs to people who prepare for it today",
+            "11": "no medicine exists that can cure hatred",
+            "12": "all monkeys cannot hang from the same branch",
+            "13": "he who digs a grave for his enemy might as well be digging one for himself",
+            "14": "even the lion protects himself against flies",
+            "15": "however long the night, the dawn will break",
+            "16": "if you heal the leg of a person, do not be surprised if they use it to run away",
+            "17": "the axe forgets but the tree remembers",
+            "18": "once you carry your own water, you'll remember every drop",
+            "19": "don't set sail on someone else's star",
+            "20": "to try and to fail is not laziness",
+            "21": "seeing is different than being told",
+            "22": "no matter how beautiful and well crafted a coffin might look, it will not make anyone wish for death",
+            "23": "wood already touched by fire is not hard to set alight",
+            "24": "confiding a secret to an unworthy person is like carrying grain in a bag with a hole",
+            "25": "a feeble effort will not fulfill the self",
+            "26": "having a good discussion is like having riches",
+            "27": "don't think there are no crocodiles just because the water is calm",
+            "28": "he who refuses to obey cannot command",
+            "29": "do not call a dog with a whip in your hand",
+            "30": "one falsehood spoils a thousand truths",
+            "31": "the earth is a beehive, we all enter by the same door",
+            "32": "rain does not fall on one roof alone",
+            "33": "however far a stream flows, it doesn't forget its origin",
+            "34": "if you think you're too small to make a difference, try spending the night with a mosquito",
+            "35": "if there is no enemy within, the enemy outside can do no harm",
+            "36": "the eye never forgets what the heart has seen",
+            "37": "no person is born great great people become great when others are sleeping",
+            "38": "when an old man dies, a library is burned with him",
+            "39": "truth should be in love and love in truth",
+            "40": "when you marry a monkey for his wealth, the money goes but the monkey remains",
+            "41": "where there is love, there is no darkness",
+            "42": "it is better to be loved than to be feared",
+            "43": "when one is in love, a cliff becomes a meadow",
+            "44": "he who loves, loves you with your dirt",
+            "45": "if love is a sickness, patience is the remedy",
+            "46": "to love someone who doesn't love you is like shaking a tree to make the dew drops fall",
+            "47": "if the full moon loves you, why worry about the stars?",
+            "48": "don't be so in love that you can't tell when it's raining",
+            "49": "even as the archer loves the arrow that flies, so too he loves the bow that remains constant in his hands",
+            "50": "love, like rain, does not choose the grass on which it falls",
+            "51": "do not treat your loved one like a swinging door: you are fond of it but you push it back and forth",
+            "52": "love doesn't listen to rumors",
+            "53": "one who loves the vase, loves also what is inside",
+            "54": "one who marries for love alone will have bad days but good nights",
+            "55": "love for something makes a man blind and deaf",
+            "56": "let your love be like the misty rain, coming softly but flooding the river",
+            "57": "the quarrel of lovers is the renewal of love",
+            "58": "don't try to make someone hate the person he loves for he will go on loving but he will hate you",
+            "59": "if a woman doesn't love you, she calls you brother",
+            "60": "love is a despot who spares no one",
+            "61": "love doesn't rely on physical features",
+            "62": "if anyone makes you laugh, it is not always because they love you",
+            "63": "you know who you love but you can't know who loves you",
+            "64": "love is a painkiller",
+            "65": "a happy man marries the girl he loves; a happier man loves the girl he married",
+            "66": "one who plants grapes by the roadside, and one who marries a pretty woman, share the same problem",
+            "67": "if money were to be found up in the trees, most people would be married to monkeys",
+            "68": "every kind of love is love, but self-love is supreme among them",
+            "69": "true love means what's mine is yours",
+            "70": "it's better to fall from a tree and break your back than to fall in love and break your heart",
+            "71": "he may say that he loves you, wait and see what he does for you",
+            "72": "it is difficult for two long-nosed lovers to kiss",
+            "73": "a fish and bird may fall in love but the two cannot build a home together",
+            "74": "lovers do not hide their nakedness",
+            "75": "when one is in love, a mountain top becomes a flat field",
+            "76": "wisdom is wealth",
+            "77": "wisdom is like a baobab tree; no one individual can embrace it",
+            "78": "the fool speaks, the wise man listens",
+            "79": "wisdom does not come overnight",
+            "80": "the heart of the wise man lies quiet like limpid water",
+            "81": "wisdom is like fire people take it from others",
+            "82": "only a wise person can solve a difficult problem",
+            "83": "knowledge without wisdom is like water in the sand",
+            "84": "in the moment of crisis, the wise build bridges, and the foolish build dams",
+            "85": "if you are filled with pride, then you will have no room for wisdom",
+            "86": "a wise person will always find a way",
+            "87": "nobody is born wise",
+            "88": "a man who uses force is afraid of reasoning",
+            "89": "wisdom is not like money to be tied up and hidden",
+            "90": "one who causes others misfortune also teaches them wisdom",
+            "91": "a fool cannot untie the knot tied by a wise man",
+            "92": "knowledge without wisdom is like water in the sand",
+            "93": "wisdom does not come overnight",
+            "94": "one day in the life of a wise man is worth a fool's entire life",
+            "95": "to get lost is to learn the way",
+            "96": "other people's wisdom prevents the king from being called a fool",
+            "97": "by the time the fool has learned the game, the players have dispersed",
+            "98": "if you close your eyes to facts, you will learn through accidents",
+            "99": "the wise create proverbs for fools to learn, not to repeat",
+            "100": "just because the lizard nods his head, doesn't mean he's in agreement",
+            "101": "a wise man fills his head before emptying his mouth",
+            "102": "if you think education is expensive, try ignorance",
+            "103": "your body is a temple of knowledge",
+            "104": "a fool has to say something a wise person has something to say",
+            "105": "the wise man never takes a step too long for his leg",
+            "106": "give advice, if people don't listen let adversity teach them",
+            "107": "a man's ruin lies in his tongue",
+            "108": "no man can outwit their ancestors",
+            "109": "it is better to live as a lion for one day rather than years as a sheep",
+            "110": "when deed speaks, words are nothing",
+            "111": "he who does not know one thing knows another",
+            "112": "a wise person doesn't fall down the same hill twice",
+            "113": "a family is like a forest, when you are outside it is dense, when you are inside you see that each tree has its place",
+            "114": "a united family eats from the same plate",
+            "115": "a family tie is like a tree, it can bend but it cannot break",
+            "116": "if i am in harmony with my family, that's success",
+            "117": "where there are many, nothing goes wrong",
+            "118": "a child is what you put into him",
+            "119": "when you show the child the moon, it sees only your finger",
+            "120": "we desire to bequeath two things to our children; the first one is roots, the other one is wings",
+            "121": "a real family eats from the same cornmeal",
+            "122": "even the maid has a family",
+            "123": "don't meddle with a family feud",
+            "124": "in a family if you have somebody who is troublesome it's the family members who are more worried than the troublesome member",
+            "125": "if you educate a man, you educate one person if you educate a woman, you educate a whole family",
+            "126": "a husband with a good wife will never be on the road without supplies",
+            "127": "a home without a woman is like a barn without cattle",
+            "128": "parents give birth to the body of their children, but not always to their characters",
+            "129": "every beetle is a gazelle in the eyes of its mother",
+            "130": "a mother cannot give birth to something bigger than herself",
+            "131": "it takes a village to raise a child",
+            "132": "a small house will hold a hundred friends",
+            "133": "a woman is a flower in a garden; her husband is the fence around it",
+            "134": "the mother hen does not break its own eggs",
+            "135": "if you want to go fast, go alone if you want to go far, go together",
+            "136": "sticks in a bundle are unbreakable",
+            "137": "brothers love each other when they are equally rich",
+            "138": "dine with a stranger but save your love for your family",
+            "139": "there is no fool who is disowned by his family",
+            "140": "if relatives help each other, what evil can hurt them?",
+            "141": "he who earns calamity, eats it with his family",
+            "142": "the old woman looks after the child to grow its teeth and the young one in turn looks after the old woman when she loses her teeth",
+            "143": "when brothers fight to the death, a stranger inherits their father's estate",
+            "144": "children are the reward of life",
+            "145": "home affairs are not talked about on the public square",
+            "146": "a child does not laugh at the ugliness of his mother",
+            "147": "family must look out for family",
+            "148": "it is hard to cure madness that originates in the family",
+            "149": "when a bitter woman takes over the house, the family she rules is doomed",
+            "150": "a bird will always use another bird's feathers to feather its own nest",
+            "151": "a person is a person because of other persons",
+            "152": "a man's grave is by the roadside",
+            "153": "he that digs up a grave for his enemy, may be digging it for himself",
+            "154": "a bad name is like a stigma",
+            "155": "by the time the fool has learned the game, the players have dispersed",
+            "156": "do not call the forest that shelters you a jungle",
+            "157": "even though the old man is strong and hearty, he will not live forever",
+            "158": "fire and gunpowder do not sleep together",
+            "159": "hunger is felt by a slave and hunger is felt by a king",
+            "160": "if you are in hiding, don't light a fire",
+            "161": "it is mr. old-man-monkey who marries mrs. old-woman-monkey",
+            "162": "it is no shame at all to work for money",
+            "163": "it is the calm and silent water that drowns a man",
+            "164": "it is the fool's sheep that break loose twice",
+            "165": "it's a bad child who does not take advice",
+            "166": "money is sharper than a sword",
+            "167": "no one tests the depth of a river with both feet",
+            "168": "one cannot both feast and become rich",
+            "169": "one falsehood spoils a thousand truths",
+            "170": "only when you have crossed the river, can you say the crocodile has a lump on his snout",
+            "171": "rain beats a leopard's skin, but it does not wash out the spots",
+            "172": "the moon moves slowly, but it crosses the town",
+            "173": "the poor man and the rich man do not play together",
+            "174": "the ruin of a nation begins in the homes of its people",
+            "175": "there is no medicine to cure hatred",
+            "176": "two small antelopes can beat a big one",
+            "177": "what is bad luck for one man is good luck for another",
+            "178": "when a king has good counselors, his reign is peaceful",
+            "179": "when a man is coming toward you, you need not say: 'come here'",
+            "180": "when a man is wealthy, he may wear an old cloth",
+            "181": "when a woman is hungry, she says, 'roast something for the children that they might eat'",
+            "182": "when the cock is drunk, he forgets about the hawk",
+            "183": "when the fool is told a proverb, its meaning has to be explained to him",
+            "184": "when you are rich, you are hated; when you are poor, you are despised",
+            "185": "when you follow in the path of your father, you learn to walk like him",
+            "186": "wood already touched by fire is not hard to set alight",
+            "187": "a chick that will grow into a cock can be spotted the very day it hatches",
+            "188": "a child's fingers are not scalded by a piece of hot yam which his mother puts into his palm",
+            "189": "an old woman is always uneasy when dry bones are mentioned in a proverb",
+            "190": "a man who pays respect to the great paves the way for his own greatness",
+            "191": "a proud heart can survive a general failure because such a failure does not prick its pride",
+            "192": "as the dog said, 'if i fall down for you and you fall down for me, it is playing'",
+            "193": "a wise man who knows proverbs, reconciles difficulties (yoruba)",
+            "194": "do not look where you fell, but where you slipped",
+            "195": "if a child washes his hands he could eat with kings",
+            "196": "if you don't stand for something, you will fall for something",
+            "197": "it takes a whole village to raise a child",
+            "198": "looking at a king's mouth one would never think he sucked his mother's breast",
+            "199": "people should not talk while they are eating or pepper may go down the wrong way",
+            "200": "the lizard that jumped from the high iroko tree to the ground said he would praise himself if no one else did",
+            "201": "the mouth which eats does not talk",
+            "202": "the sun will shine on those who stand before it shines on those who kneel under them",
+            "203": "those whose palm-kernels were cracked for them by a benevolent spirit should not forget to be humble",
+            "204": "when a man says yes, his chi (personal god) says yes also",
+            "205": "when the moon is shining the cripple becomes hungry for a walk",
+            "206": "you can tell a ripe corn by its look",
+            "207": "you must judge a man by the work of his hands",
+            "208": "slow, slow is the way to go/slowness is the better locomotion",
+            "209": "being steady and keen is important when performing given tasks hurry, hurry, has no blessings",
+            "210": "more haste less speed",
+            "211": "the remedy for fire is fire",
+            "212": "tit for tat",
+            "213": "a person is people",
+            "214": "no man is an island",
+            "215": "nine is near ten",
+            "216": "intelligence is an asset. knowledge can be used to better ones life",
+            "217": "little by little fills up the measure",
+            "218": "a great journey is begun by a single mile",
+            "219": "anger brings damage",
+            "220": "the child of a snake is a snake",
+            "221": "like father like son",
+            "222": "one falsehood spoils a thousand truths",
+            "223": "only when you have crossed the river, can you say the crocodile has a lump on his snout",
+            "224": "rain beats a leopard's skin, but it does not wash out the spots",
+            "225": "the moon moves slowly, but it crosses the town",
+            "226": "the poor man and the rich man do not play together",
+            "227": "the ruin of a nation begins in the homes of its people",
+            "228": "there is no medicine to cure hatred",
+            "229": "two small antelopes can beat a big one",
+            "230": "what is bad luck for one man is good luck for another",
+            "231": "when a king has good counselors, his reign is peaceful",
+            "232": "when a man is coming toward you, you need not say: 'come here'",
+            "233": "when a man is wealthy, he may wear an old cloth",
+            "234": "when a woman is hungry, she says, 'roast something for the children that they might eat'",
+            "235": "when the cock is drunk, he forgets about the hawk",
+            "236": "when the fool is told a proverb, its meaning has to be explained to him",
+            "237": "when you are rich, you are hated; when you are poor, you are despised",
+            "238": "when you follow in the path of your father, you learn to walk like him",
+            "239": "wood already touched by fire is not hard to set alight",
+            "240": "a chick that will grow into a cock can be spotted the very day it hatches",
+            "241": "a child's fingers are not scalded by a piece of hot yam which his mother puts into his palm",
+            "242": "an old woman is always uneasy when dry bones are mentioned in a proverb",
+            "243": "a man who pays respect to the great paves the way for his own greatness",
+            "244": "a proud heart can survive a general failure because such a failure does not prick its pride",
+            "245": "as the dog said, 'if i fall down for you and you fall down for me, it is playing'",
+            "246": "a wise man who knows proverbs, reconciles difficulties (yoruba)",
+            "247": "do not look where you fell, but where you slipped",
+            "248": "if a child washes his hands he could eat with kings",
+            "249": "if you don't stand for something, you will fall for something",
+            "250": "it takes a whole village to raise a child",
+            "251": "looking at a king's mouth one would never think he sucked his mother's breast",
+            "252": "people should not talk while they are eating or pepper may go down the wrong way",
+            "253": "the lizard that jumped from the high iroko tree to the ground said he would praise himself if no one else did",
+            "254": "the mouth which eats does not talk",
+            "255": "the sun will shine on those who stand before it shines on those who kneel under them",
+            "256": "those whose palm-kernels were cracked for them by a benevolent spirit should not forget to be humble",
+            "257": "when a man says yes, his chi (personal god) says yes also",
+            "258": "when the moon is shining the cripple becomes hungry for a walk",
+            "259": "you can tell a ripe corn by its look",
+            "260": "you must judge a man by the work of his hands",
+            "261": "slow, slow is the way to go/slowness is the better locomotion",
+            "262": "being steady and keen is important when performing given tasks hurry, hurry, has no blessings",
+            "263": "more haste less speed",
+            "264": "the remedy for fire is fire",
+            "265": "tit for tat",
+            "266": "a person is people",
+            "267": "no man is an island",
+            "268": "nine is near ten",
+            "269": "intelligence is an asset. knowledge can be used to better ones life",
+            "270": "little by little fills up the measure",
+            "271": "a great journey is begun by a single mile",
+            "272": "anger brings damage",
+            "273": "the child of a snake is a snake",
+            "274": "like father like son",
+            "275": "the apple does not fall away from its tree",
+            "276": "habit is a skin"
+        },
+        "Meaning ": {
+            "0": "It is good to stay humble and remember your origins",
+            "1": "You can tell someone is a fool by their actions",
+            "2": "Pay attention to what people do not what they say",
+            "3": "Success is determined by how you start",
+            "4": "To gain knowledge, one must consistently study",
+            "5": "You cannot gain anything by sitting around talking about it. You must get up and work for it.",
+            "6": "Look for the cause of a problem and not the symptoms",
+            "7": "It is easy for a person to get into trouble when he or she is not busy doing something.",
+            "8": "If we want to reach the top of our respective goals, we will need to put in the work",
+            "9": "When powerful forces go to war, it's their people who are hurt. Those who never asked for the conflict in the first place are caught, and killed, in the crossfire.",
+            "10": "Our actions in the present determine if we achieve our goals in the future",
+            "11": "Hatred is a complex and powerful emotion that can be incredle to overcome",
+            "12": "Something good will come out of a difficult situation",
+            "13": "Someone that plans harm or misfortune for others may also inadvertently be the recipient of that same misfortune.",
+            "14": "Always be on your guard and do not let yourself be taken advantage of by anyone or anything. ",
+            "15": "No matter how difficult or dark the current circumstances may seem, there is always the promise of a better future ahead.",
+            "16": "Even when we help others, they may not always be grateful and may take advantage of our kindness",
+            "17": "A person hurt in a situation remembers, whereas the person who hurt the other, forgets.",
+            "18": "Experiences in life deepen our appreciation for things we often overlook.",
+            "19": "Just because someone has been successful at doing something does not mean you will be successful at doing the same thing.",
+            "20": "Don't be discouraged when you fail, as long as you are.\u00a0doing something. Use failure as a driving force to push. you forward.",
+            "21": "Don't mistake hearsay from the truth.",
+            "22": "Material possessions are not as important as life itself.",
+            "23": "With the right preparatory work and conditions, a difficult task can become much easier.",
+            "24": "It is important to choose trustworthy friends.",
+            "25": "Doing your best is sufficient.",
+            "26": "Engaging in meaningful conversations and exchanging ideas can be as valuable as wealth or material riches.",
+            "27": "Always be aware of your surroundings and different situations.",
+            "28": "A good leader should first learn how to follow orders in order to be successful.",
+            "29": "Approach things with a calm and open mindset.",
+            "30": "No matter what the situation, it's always better to tell the truth.",
+            "31": "Regardless of our differences, we all share a common origin and destiny.",
+            "32": "Trouble comes to everyone at one point or another.",
+            "33": "Always remember your roots and respect your traditions no matter where you are.",
+            "34": "Even the most seemingly insignificant beings can make quite a difference to someone.\u00a0",
+            "35": "Our greatest enemy is often ourselves.",
+            "36": "The experiences that deeply affect us emotionally are remembered vividly and lastingly.",
+            "37": "Greatness is earned through effort, not inherited at birth.",
+            "38": "When an elder passes away, valuable knowledge is lost forever.",
+            "39": "Genuine love and truth are intertwined and inseparable.",
+            "40": "Marrying for wealth may lead to loss, but the undesirable traits remain.",
+            "41": "Love illuminates and dispels darkness.",
+            "42": "Being loved brings greater happiness than being feared.",
+            "43": "Love transforms obstacles into opportunities.",
+            "44": "True love accepts imperfections without judgment.",
+            "45": "Patience is the cure for love's challenges.",
+            "46": "Unrequited love is futile and unrewarding.",
+            "47": "Focus on the love you have, not on what you lack.",
+            "48": "Love remains steadfast even amid change.",
+            "49": "Love is indiscriminate and falls where it may.",
+            "50": "Treat your loved ones with respect and consistency.",
+            "51": "Love is deaf to gossip and hears only the truth.",
+            "52": "True love values both the container and its contents.",
+            "53": "If someone loves or appreciates something superficial, they also value what is deeper or more meaningful.",
+            "54": "Marrying for love alone may bring challenges during the day, but intimacy and connection at night.",
+            "55": "When someone is deeply attached or infatuated with something, they may overlook its faults or fail to hear criticism.",
+            "56": "Love should be gentle and gradual but have a powerful and transformative effect over time.",
+            "57": "Disagreements and conflicts between lovers can ultimately strengthen their relationship by resolving issues and fostering understanding.",
+            "58": "Trying to turn someone against the person they love will only create resentment towards you, not diminish their love for the other person.",
+            "59": "If a woman doesn't have romantic feelings for a man, she may consider him only as a friend or brother.",
+            "60": "Love can be powerful and controlling, affecting everyone regardless of their status or position.",
+            "61": "Love is not dependent on physical appearance; it goes beyond superficial features.",
+            "62": "If someone makes you laugh, it doesn't necessarily mean they love you; laughter can have various motivations.",
+            "63": "While you may know who you love, it's difficult to know who loves you in return.",
+            "64": "Love can provide comfort and relief from pain.",
+            "65": "Finding happiness in the person you marry brings greater fulfillment than simply marrying someone you love.",
+            "66": "Pursuing superficial things can lead to common problems and challenges.",
+            "67": "Many people prioritize wealth over other qualities when choosing a partner.",
+            "68": "While various forms of love exist, self-love is the most important.",
+            "69": "True love involves sharing and sacrifice.",
+            "70": "The pain of a broken heart can be worse than physical injury.",
+            "71": "Actions speak louder than words when it comes to demonstrating love.",
+            "72": "Sometimes, physical differences can complicate expressions of love.",
+            "73": "Love doesn't hide vulnerabilities or flaws.",
+            "74": "Love can change one's perception of the world, making challenges seem less daunting.",
+            "75": "Wisdom is valuable and can lead to success.",
+            "76": "Wisdom is vast and cannot be fully grasped by one individual.",
+            "77": "A wise person listens more than they speak.",
+            "78": "Wisdom is acquired over time through experience and reflection.",
+            "79": "Wise individuals are calm and tranquil.",
+            "80": "Wisdom is shared and spread among people.",
+            "81": "Problem-solving often requires wisdom.",
+            "82": "Knowledge without understanding or insight is worthless.",
+            "83": "In times of crisis, wise individuals find solutions, while fools create further problems.",
+            "84": "Pride can hinder the acquisition of wisdom.",
+            "85": "Wise individuals find solutions to challenges.",
+            "86": "Wisdom is not innate; it's acquired through learning and experience.",
+            "87": "A single day of wise decisions can surpass a lifetime of foolishness.",
+            "88": "Mistakes can be valuable learning experiences.",
+            "89": "The wisdom of others can prevent foolishness.",
+            "90": "By the time a fool learns, others may have moved on.",
+            "91": "Ignoring facts can lead to unintended consequences.",
+            "92": "Proverbs are designed to impart wisdom to those who listen.",
+            "93": "Actions don't always indicate agreement or consent.",
+            "94": "Wise individuals think before they speak.",
+            "95": "Ignorance can be more costly than education.",
+            "96": "Your body is a vessel for learning and growth.",
+            "97": "A wise person speaks thoughtfully, whereas a fool speaks impulsively.",
+            "98": "Wise individuals plan carefully to avoid unnecessary risks.",
+            "99": "Adversity can be a powerful teacher.",
+            "100": "Words can bring about destruction if spoken carelessly.",
+            "101": "Ancestral wisdom is often invaluable.",
+            "102": "It's better to take decisive action than to hesitate.",
+            "103": "Deeds are more meaningful than words alone.",
+            "104": "People have different areas of expertise and knowledge.",
+            "105": "Wise individuals learn from their mistakes and don't repeat them.",
+            "106": "Family provides support and structure.",
+            "107": "Unity within a family is essential for its strength.",
+            "108": "Family bonds are resilient but can be flexible.",
+            "109": "Harmony within the family is a measure of success.",
+            "110": "Cooperation among many leads to success.",
+            "111": "Children's development is influenced by their upbringing.",
+            "112": "Children often imitate what they see.",
+            "113": "Parents aim to provide their children with roots (foundation) and wings (opportunities).",
+            "114": "Family members share resources and experiences.",
+            "115": "Even those in servitude have familial ties.",
+            "116": "Interfering in family disputes can be risky.",
+            "117": "Family members are often more concerned about troublesome relatives than the individuals themselves.",
+            "118": "Educating women benefits entire families and communities.",
+            "119": "A good spouse contributes to the well-being of the family.",
+            "120": "Women play a vital role in the household.",
+            "121": "Parental influence extends beyond physical attributes.",
+            "122": "Every mother sees her child as special.",
+            "123": "Community support is essential in raising children.",
+            "124": "Even a small space can accommodate many friends.",
+            "125": "A husband protects and cherishes his wife.",
+            "126": "Parents prioritize the well-being of their offspring.",
+            "127": "Collaboration leads to greater achievements than working alone.",
+            "128": "Solidarity among people makes them stronger.",
+            "129": "Brothers often share a special bond when they are equally successful.",
+            "130": "While it's fine to dine with strangers, familial love should be preserved.",
+            "131": "Disownment from one's family is a rare occurrence.",
+            "132": "Mutual assistance among relatives can mitigate external challenges.",
+            "133": "Misfortune affects families collectively.",
+            "134": "The elderly care for the young, and vice versa, in a cycle of support.",
+            "135": "Family disputes can lead to inheritance issues.",
+            "136": "Children are a source of joy and fulfillment.",
+            "137": "Private family matters should be kept within the household.",
+            "138": "Children respect their parents despite any flaws.",
+            "139": "Families should prioritize each other's well-being.",
+            "140": "Familial conflicts can be challenging to resolve.",
+            "141": "The ruler's actions can influence the entire nation.",
+            "142": "Humility is essential for maintaining relationships.",
+            "143": "Cooperation and collaboration lead to success.",
+            "144": "Learning from past mistakes is important for growth.",
+            "145": "Educating children is a communal effort.",
+            "146": "Personal experiences shape one's perspective.",
+            "147": "Mutual respect is crucial for peaceful coexistence.",
+            "148": "Proverbs contain wisdom that can resolve disputes.",
+            "149": "Judging by actions is more accurate than judging by words.",
+            "150": "Patience and steady progress lead to success.",
+            "151": "Rushing often leads to mistakes.",
+            "152": "Responding to fire with fire can be effective.",
+            "153": "Retaliation in kind is a common response to offense.",
+            "154": "Individuals are shaped by their interactions with others.",
+            "155": "Collaboration and collective effort yield stronger results.",
+            "156": "No one can thrive in isolation.",
+            "157": "Progress comes gradually through steady effort.",
+            "158": "Intellect is valuable and can improve one's life.",
+            "159": "Consistent effort leads to significant achievements.",
+            "160": "A journey of a thousand miles begins with a single step.",
+            "161": "Anger can lead to negative outcomes.",
+            "162": "One's upbringing influences their behavior.",
+            "163": "Recognizing patterns is crucial for avoiding mistakes.",
+            "164": "Family ties are strong and enduring.",
+            "165": "Appearance can be deceptive.",
+            "166": "Etiquette is important, especially during meals.",
+            "167": "Self-praise is often viewed negatively.",
+            "168": "Hard work is necessary for success.",
+            "169": "A single lie can discredit numerous truths or undermine trust in vast information.",
+            "170": "Understanding comes from direct experience; judgment should be reserved until one has firsthand knowledge.",
+            "171": "External influences may impact a person, but they cannot fundamentally change who they are.",
+            "172": "Progress takes time, but eventual achievement is certain.",
+            "173": "Socio-economic disparities often create divides that hinder social interaction.",
+            "174": "Societal problems often stem from issues within individual households or families.",
+            "175": "Hatred cannot be easily eradicated or treated with conventional means.",
+            "176": "Collective effort can overcome individual strength or advantage.",
+            "177": "Perspectives on fortune vary based on individual circumstances.",
+            "178": "Wise advisors contribute to effective leadership and stability.",
+            "179": "Actions speak louder than words; there's no need to state the obvious.",
+            "180": "Wealth brings comfort and the freedom to disregard societal expectations.",
+            "181": "A woman prioritizes her family's needs, even when she herself is hungry.",
+            "182": "Overconfidence can lead to overlooking potential dangers.",
+            "183": "Some individuals lack the insight to understand wisdom without explanation.",
+            "184": "Jealousy and disdain often accompany both wealth and poverty.",
+            "185": "Children often emulate their parents' behaviors and values.",
+            "186": "Once a precedent is set, it's easier to repeat or continue similar actions.",
+            "187": "Certain traits or characteristics are evident from an early age.",
+            "188": "A mother protects her child from harm, even when she herself is affected.",
+            "189": "Experience brings awareness of potential threats or uncomfortable truths.",
+            "190": "Showing respect to those in authority or of higher status can lead to personal success.",
+            "191": "Pride can shield an individual from the full impact of failure.",
+            "192": "Reciprocity is essential for true cooperation and mutual benefit.",
+            "193": "Proverbs offer insights that can help resolve conflicts and solve problems.",
+            "194": "Focus on identifying the root cause of a problem, rather than dwelling on its immediate effects.",
+            "195": "Good habits and hygiene can lead to opportunities for advancement.",
+            "196": "Having principles and beliefs prevents being swayed or misled by others.",
+            "197": "Parenting and upbringing are collaborative efforts that involve the entire community.",
+            "198": "One's appearance or status can mask their humble origins.",
+            "199": "It's important to observe proper etiquette to avoid discomfort or mishaps.",
+            "200": "Self-praise often stems from a lack of external validation or recognition.",
+            "201": "Actions speak louder than words; it's more important to do than to say.",
+            "202": "Success favors those who take initiative and assert themselves.",
+            "203": "One should remain grateful for assistance or good fortune, rather than becoming arrogant.",
+            "204": "Agreement or alignment with one's destiny leads to favorable outcomes.",
+            "205": "External conditions or circumstances can inspire action or ambition.",
+            "206": "Experience allows one to recognize qualities or attributes without needing further confirmation.",
+            "207": "Judging someone by their actions and accomplishments is more accurate than judging by their words.",
+            "208": "Progressing steadily and cautiously is better than rushing.",
+            "209": "Patience and focus lead to success, while haste leads to mistakes.",
+            "210": "Rushing often results in errors and delays.",
+            "211": "Sometimes, confronting a problem directly is the best solution.",
+            "212": "Responding to an action with a similar action.",
+            "213": "Emphasizes the shared humanity among individuals.",
+            "214": "Everyone depends on others in some way.",
+            "215": "Indicates nearing completion or fullness.",
+            "216": "Intelligence is valuable, but applying knowledge is crucial for improvement.",
+            "217": "Incremental progress leads to significant achievements.",
+            "218": "Every significant accomplishment starts with a small step.",
+            "219": "Acting out of anger leads to negative consequences.",
+            "220": "Traits or behaviors are often inherited.",
+            "221": "Children often resemble their parents.",
+            "222": "A single lie undermines credibility.",
+            "223": "Don't underestimate a danger until it's fully confronted.",
+            "224": "Adversity may affect someone superficially, but it does not change their true character.",
+            "225": "Progress may seem slow, but with patience and persistence, significant achievements can be made.",
+            "226": "Social classes often remain separate, indicating societal divisions and inequality.",
+            "227": "Societal problems often originate from individual behaviors and values within families and communities.",
+            "228": "Hatred is a deep-rooted emotion that cannot be easily eliminated or cured.",
+            "229": "Unity and cooperation can overcome formidable challenges.",
+            "230": "Circumstances that are unfortunate for one person may benefit another, illustrating the subjective nature of fortune.",
+            "231": "Wise advisors contribute to effective leadership and stability.",
+            "232": "Actions speak louder than words; unnecessary communication can be avoided.",
+            "233": "Wealth allows for certain liberties or eccentricities, such as not conforming to societal expectations.",
+            "234": "Responsibility for providing for others often takes precedence over personal needs or desires.",
+            "235": "Intoxication or unawareness can make someone vulnerable to danger.",
+            "236": "Some individuals lack understanding and require explanations for simple truths or sayings.",
+            "237": "Jealousy and resentment exist regardless of social or financial status.",
+            "238": "Children often adopt the behaviors and values of their parents or role models.",
+            "239": "Past experiences make one more susceptible to similar occurrences in the future.",
+            "240": "Some individuals exhibit characteristics or potential from a young age.",
+            "241": "Parents protect and care for their children, ensuring their safety and well-being.",
+            "242": "Certain topics or reminders of mortality can evoke discomfort or anxiety, especially in older individuals.",
+            "243": "Showing reverence towards accomplished individuals can inspire personal growth.",
+            "244": "Pride can shield someone from the emotional impact of failure or setback.",
+            "245": "Mutual cooperation or assistance is natural and reciprocal.",
+            "246": "Proverbs hold wisdom that can be applied to resolve conflicts or challenges.",
+            "247": "Focus on identifying the cause of a mistake rather than dwelling on the mistake itself.",
+            "248": "Proper preparation and behavior can lead to opportunities for success and acceptance.",
+            "249": "Having principles or convictions is essential for avoiding manipulation or deception.",
+            "250": "Parenting and upbringing are collective responsibilities that involve the entire community.",
+            "251": "Appearances can be deceiving; one should not judge solely based on outward impressions.",
+            "252": "Certain actions or behaviors should be avoided in specific contexts to prevent mishaps or misunderstandings.",
+            "253": "Self-praise may be necessary when recognition from others is lacking.",
+            "254": "Actions speak louder than words, and someone who benefits from a situation may remain silent.",
+            "255": "Assertiveness and self-respect lead to success and recognition.",
+            "256": "Success obtained with the help of others should be acknowledged with humility.",
+            "257": "Personal beliefs or convictions influence one's actions and decisions.",
+            "258": "Positive circumstances can inspire and motivate individuals, regardless of their limitations.",
+            "259": "Experience and intuition allow one to recognize qualities or characteristics without explicit evidence.",
+            "260": "Assess someone based on their actions and accomplishments rather than mere appearances or promises.",
+            "261": "Proceeding cautiously and steadily is preferable to rushing.",
+            "262": "Rushing or impatience often leads to mistakes and negative outcomes.",
+            "263": "Rushing leads to inefficiency and mistakes, ultimately slowing progress.",
+            "264": "Sometimes, a problem can only be solved by confronting it directly or using a similar approach.",
+            "265": "Responding to an action with a similar action.",
+            "266": "Emphasizes the shared humanity among individuals.",
+            "267": "Everyone depends on others in some way.",
+            "268": "Indicates nearing completion or fullness.",
+            "269": "Intelligence is valuable, but applying knowledge is crucial for improvement.",
+            "270": "Incremental progress leads to significant achievements.",
+            "271": "Every significant accomplishment starts with a small step.",
+            "272": "Acting out of anger leads to negative consequences.",
+            "273": "Traits or behaviors are often inherited.",
+            "274": "A child's character or behavior can be expected to resemble that of their parents.",
+            "275": "A child usually has a similar character or similar qualities to his or her parents.",
+            "276": "It's difficult to change habits once they are established."
+        }
     }
 ]

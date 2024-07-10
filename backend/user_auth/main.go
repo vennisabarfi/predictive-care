@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"user_auth/handlers"
 	"user_auth/models"
 	"user_auth/storage"
 
@@ -208,6 +209,8 @@ func main() {
 	} else {
 		log.Println("Proverbs Database migrated successfully.")
 	}
+
+	handlers.InsertProverb()
 
 	app := &App{DB: db}
 

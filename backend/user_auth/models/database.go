@@ -24,7 +24,7 @@ type Artist struct {
 	gorm.Model
 	ID       uint    `json:"id"`
 	Name     string  `json:"name"`
-	Location string  `json:"location"`
+	Location string  `json:"location"` //event_location
 	MaxPrice float32 `json:"min_price"`
 	MinPrice float32 `json:"max_price"`
 	UserID   uint    `gorm: "index"`

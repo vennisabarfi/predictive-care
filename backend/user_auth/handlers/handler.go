@@ -5,84 +5,82 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"user_auth/storage"
 
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
-// get current directory
-func Getwd() (dir string, err error) {
-	mydir, err := os.Getwd()
-	if err != nil {
-		fmt.Println("Could not retrieve current directory", err)
-	}
-	fmt.Println(mydir)
-	return
-}
-
+// Structure of each proverb(text field)
 type Proverb struct {
 	gorm.Model
-	ID       uint              `json: "id"`
-	Proverbs map[string]string `json:"proverbs"`
+	Text string `json:"text"`
+}
+
+// helper struct to decode JSON data correctly
+type ProverbsData struct {
+	Proverbs []string `json:"Proverbs"`
 }
 
 func InsertProverb() {
-	jsonFile, err := os.Open("proverbs_data.json")
+	// Open JSON file
+	jsonFile, err := os.Open("proverbs_only.json")
 	if err != nil {
-		println("File could not be found!")
-		panic(err)
+		log.Fatalf("File could not be found: %v", err)
 	}
-	println("File found successfully!")
 	defer jsonFile.Close()
+	fmt.Println("File found successfully!")
 
-	// Read the contents of the file into a []byte slice
-	fileinfo, err := jsonFile.Stat() //find file size
+	// Decode JSON file
+	var proverbsData ProverbsData
+	err = json.NewDecoder(jsonFile).Decode(&proverbsData)
 	if err != nil {
-		panic("Could not obtain stat/ file size in bytes")
+		log.Fatalf("Error decoding JSON: %v", err)
 	}
-	data := make([]byte, fileinfo.Size()) //read file to retrieve json data
-	count, err := jsonFile.Read(data)
+	fmt.Println("Successfully decoded JSON data!")
+
+	// Print each proverb (for testing)
+	for index, proverb := range proverbsData.Proverbs {
+		fmt.Printf("Proverb %d: %s\n", index+1, proverb)
+	}
+
+	// Establish PostgreSQL connection
+	config := &storage.Config{
+		Host:     os.Getenv("DB_HOST"),
+		Port:     os.Getenv("DB_PORT"),
+		User:     os.Getenv("DB_USER"),
+		Password: os.Getenv("DB_PASS"),
+		DBName:   os.Getenv("DB_NAME"),
+		SSLMode:  os.Getenv("DB_SSLMODE"),
+	}
+
+	//Refactor this to call on storage
+	db, err := gorm.Open(postgres.New(postgres.Config{
+		DSN: fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
+			config.Host, config.Port, config.User, config.Password, config.DBName, config.SSLMode),
+	}), &gorm.Config{})
 	if err != nil {
-		log.Fatal(err)
+		log.Fatalf("Error connecting to database: %v", err)
 	}
-	println("JSON File successfully read into byte slice!")
-	fmt.Printf("read %d bytes: %q\n", count, data[:count])
-	// println("Data:", data)
+	fmt.Println("Connected to Database!.")
 
-	// Parse json data into slice
-	var proverbs Proverb //variable to hold parsed JSON data
-	err = json.Unmarshal(data, &proverbs)
+	// Auto migrate Proverb table
+	err = db.AutoMigrate(&Proverb{})
 	if err != nil {
-		println("Error unmarshaling json data")
-		panic(err)
+		log.Fatalf("Error migrating Proverb table: %v", err)
 	}
-	println("Successfully parsed json data!")
+	fmt.Println("Proverb table migrated successfully.")
 
-	// Access and print each proverb
-	for key, proverb := range proverbs.Proverbs {
-		fmt.Printf("Proverb %s: %s\n", key, proverb)
+	// Prepare Proverb records for batch insertion
+	var proverbRecords []Proverb
+	for _, text := range proverbsData.Proverbs {
+		proverbRecords = append(proverbRecords, Proverb{Text: text})
 	}
 
+	// Batch insert data into database
+	result := db.Create(&proverbRecords)
+	if result.Error != nil {
+		log.Fatalf("Error inserting proverbs into database: %v", result.Error)
+	}
+	fmt.Println("Proverbs successfully inserted into database!")
 }
-
-// insert proverb data into gorm
-// read file and then read json data
-// write into a list and then batch insert
-// func InsertProverb() {
-// 	filename := "proverbs_cleaned.json"
-// 	file, err := os.Open(filename) //read file
-// 	if err != nil {
-// 		log.Fatal("Could not locate file!", err)
-// 	}
-// 	println("File found successfully!", filename)
-// 	defer file.Close() //ensure file is closed
-
-// 	//read file data into a slice of bytes
-// 	data := make([]byte, 100)
-// 	count, err := file.Read(data)
-// 	if err != nil {
-// 		log.Fatal("Error reading file", err)
-// 	}
-// 	println("File read successfully!")
-// 	fmt.Printf("read %d bytes: %q\n", count, data[:count])
-
-// }

@@ -29,7 +29,7 @@ proverbs_json ={
 print(proverbs_json)
 
 # Write json data to file
-with open('proverbs_cleaned.json', 'w') as f:
+with open('proverbs_only.json', 'w') as f:
     json.dump(proverbs_json, f, indent=4)
 
 # Write formatted data to output file

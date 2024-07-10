@@ -202,6 +202,13 @@ func main() {
 		log.Println("User Database migrated successfully.")
 	}
 
+	err = models.MigrateProverb(db)
+	if err != nil {
+		log.Fatal("Proverbs Database could not be migrated", err)
+	} else {
+		log.Println("Proverbs Database migrated successfully.")
+	}
+
 	app := &App{DB: db}
 
 	//login user

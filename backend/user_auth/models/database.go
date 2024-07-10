@@ -19,7 +19,23 @@ type User struct {
 	DeletedAt gorm.DeletedAt `gorm:"index"`
 }
 
+// Define Proverbs model
+type Proverbs struct {
+	gorm.Model
+	ID      uint   `json: "id"`
+	Proverb string `json:"proverb"`
+}
+
+// Define Meanings model
+type Meanings struct {
+}
+
 func MigrateUser(db *gorm.DB) error {
 	err := db.AutoMigrate(&User{})
+	return err
+}
+
+func MigrateProverb(db *gorm.DB) error {
+	err := db.AutoMigrate(&Proverbs{})
 	return err
 }

@@ -1,7 +1,9 @@
 package handlers
 
 import (
+	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 
 	"gorm.io/gorm"
@@ -17,20 +19,49 @@ func Getwd() (dir string, err error) {
 	return
 }
 
-type Entry struct {
+type Proverb struct {
 	gorm.Model
-	Proverbs string `json:"proverbs"`
+	ID       uint              `json: "id"`
+	Proverbs map[string]string `json:"proverbs"`
 }
 
 func InsertProverb() {
-	file, err := os.Open("proverbs_data.json")
+	jsonFile, err := os.Open("proverbs_data.json")
 	if err != nil {
 		println("File could not be found!")
 		panic(err)
 	}
-	defer file.Close()
+	println("File found successfully!")
+	defer jsonFile.Close()
+
+	// Read the contents of the file into a []byte slice
+	fileinfo, err := jsonFile.Stat() //find file size
+	if err != nil {
+		panic("Could not obtain stat/ file size in bytes")
+	}
+	data := make([]byte, fileinfo.Size()) //read file to retrieve json data
+	count, err := jsonFile.Read(data)
+	if err != nil {
+		log.Fatal(err)
+	}
+	println("JSON File successfully read into byte slice!")
+	fmt.Printf("read %d bytes: %q\n", count, data[:count])
+	// println("Data:", data)
 
 	// Parse json data into slice
+	var proverbs Proverb //variable to hold parsed JSON data
+	err = json.Unmarshal(data, &proverbs)
+	if err != nil {
+		println("Error unmarshaling json data")
+		panic(err)
+	}
+	println("Successfully parsed json data!")
+
+	// Access and print each proverb
+	for key, proverb := range proverbs.Proverbs {
+		fmt.Printf("Proverb %s: %s\n", key, proverb)
+	}
+
 }
 
 // insert proverb data into gorm

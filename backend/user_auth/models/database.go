@@ -8,6 +8,7 @@ import (
 
 // User can have many artists to track
 // Define User model
+
 type User struct {
 	gorm.Model
 	ID        uint    `json:"id" gorm:"primary_key"`
@@ -17,6 +18,11 @@ type User struct {
 	CreatedAt time.Time
 	UpdatedAt time.Time
 	DeletedAt gorm.DeletedAt `gorm:"index"`
+}
+
+type Proverb struct {
+	gorm.Model
+	Text string `json:"text"`
 }
 
 // Define Meanings model

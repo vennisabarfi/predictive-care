@@ -22,6 +22,24 @@ type App struct {
 	DB *gorm.DB
 }
 
+// View proverbs in database
+// "/viewproverbs"
+func (app *App) ViewProverb(c *gin.Context) {
+
+	var proverb []handlers.Proverb
+
+	err := app.DB.Find(&proverb)
+
+	if err != nil {
+		println(err)
+	}
+
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"message": "Hello World",
+		"result":  proverb,
+	})
+}
+
 // Sign up handler
 func (app *App) register(c *gin.Context) {
 	//Get email and password from req body
@@ -213,6 +231,8 @@ func main() {
 	r.POST("/register", app.register)
 	//logout user
 	r.GET("/logout", app.logout)
+	//view proverbs
+	r.GET("/viewproverbs", app.ViewProverb)
 
 	r.Run(":" + os.Getenv("PORT"))
 

@@ -22,21 +22,44 @@ type App struct {
 	DB *gorm.DB
 }
 
-// View proverbs in database
+// View all proverbs in database
 // "/viewproverbs"
-func (app *App) ViewProverb(c *gin.Context) {
+func (app *App) ViewProverbs(c *gin.Context) {
 
 	var proverb []handlers.Proverb
 
 	err := app.DB.Find(&proverb)
 
 	if err != nil {
+		c.IndentedJSON(http.StatusBadRequest, gin.H{
+			"message": err,
+		})
 		println(err)
 	}
 
 	c.IndentedJSON(http.StatusOK, gin.H{
 		"message": "Hello World",
 		"result":  proverb,
+	})
+}
+
+// add tests for when no more proverbs
+// View Specific Proverb by ID ("/viewproverbs/:id")
+func (app *App) ViewProverb(c *gin.Context) {
+	var proverb []handlers.Proverb
+	id := c.Param("id")
+
+	err := app.DB.First(&proverb, id)
+
+	if err != nil {
+		c.IndentedJSON(http.StatusBadRequest, gin.H{
+			"message": err,
+		})
+		println(err)
+	}
+	//update to just return text section of data
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"result": proverb,
 	})
 }
 
@@ -231,8 +254,10 @@ func main() {
 	r.POST("/register", app.register)
 	//logout user
 	r.GET("/logout", app.logout)
-	//view proverbs
-	r.GET("/viewproverbs", app.ViewProverb)
+	//view all proverbs
+	r.GET("/viewproverbs", app.ViewProverbs)
+	//view specific proverb
+	r.GET("/viewproverbs/:id", app.ViewProverb)
 
 	r.Run(":" + os.Getenv("PORT"))
 

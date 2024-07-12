@@ -40,9 +40,9 @@ func InsertProverb() {
 	fmt.Println("Successfully decoded JSON data!")
 
 	// Print each proverb (for testing)
-	for index, proverb := range proverbsData.Proverbs {
-		fmt.Printf("Proverb %d: %s\n", index+1, proverb)
-	}
+	// for index, proverb := range proverbsData.Proverbs {
+	// 	fmt.Printf("Proverb %d: %s\n", index+1, proverb)
+	// }
 
 	// Establish PostgreSQL connection
 	config := &storage.Config{

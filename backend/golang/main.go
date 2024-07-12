@@ -212,6 +212,7 @@ func main() {
 	r := gin.New()
 	// port := os.Getenv("PORT")
 
+	// set up security headers
 	err := godotenv.Load(".env")
 
 	if err != nil {

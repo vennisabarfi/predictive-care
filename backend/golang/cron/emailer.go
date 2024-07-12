@@ -3,7 +3,8 @@ package cron
 import (
 	"fmt"
 	"log"
-	"user_auth/gomail"
+
+	"github.com/go-gomail/gomail"
 )
 
 func SendEmail() {

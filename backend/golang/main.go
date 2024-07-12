@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"os"
 	"time"
+	"user_auth/cron"
 	"user_auth/handlers"
 	"user_auth/models"
 	"user_auth/storage"
@@ -247,7 +248,7 @@ func main() {
 
 	handlers.InsertProverb()
 
-	// cron.SendEmail()
+	cron.SendEmail()
 
 	// cron.FirstCron()
 

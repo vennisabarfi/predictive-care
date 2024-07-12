@@ -3,8 +3,11 @@ package cron
 import (
 	"fmt"
 	"log"
+	"os"
+	"strconv"
 
 	"github.com/go-gomail/gomail"
+	"github.com/joho/godotenv"
 )
 
 func SendEmail() {
@@ -15,11 +18,24 @@ func SendEmail() {
 		Address string //email address
 	}
 
-	// Using MailHog (SMTP server on port 1025)
-	d := gomail.NewDialer("localhost", 3000, "", "")
+	// Using MailHog (SMTP server on port 1025). Docker Run!
+	err := godotenv.Load(".env")
+	if err != nil {
+		panic(err)
+	}
+	// convert port number to int
+	smtp_port := os.Getenv("SMTP_PORT")
+	port, err := strconv.Atoi(smtp_port) // port number
+	if err != nil {
+		panic(err)
+	}
+
+	d := gomail.NewDialer(os.Getenv("SMTP_HOST"), port, "", "")
 	s, err := d.Dial()
 	if err != nil {
 		panic(err)
+	} else {
+		fmt.Println("SMTP Server is up and running")
 	}
 
 	m := gomail.NewMessage()

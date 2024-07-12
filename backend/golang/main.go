@@ -247,6 +247,10 @@ func main() {
 
 	handlers.InsertProverb()
 
+	// cron.SendEmail()
+
+	// cron.FirstCron()
+
 	app := &App{DB: db}
 
 	//login user

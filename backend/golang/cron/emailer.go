@@ -8,7 +8,13 @@ import (
 
 	"github.com/go-gomail/gomail"
 	"github.com/joho/godotenv"
+	"gorm.io/gorm"
 )
+
+// App struct to hold dependencies
+type App struct {
+	DB *gorm.DB
+}
 
 func SendEmail() {
 	// List of recipients

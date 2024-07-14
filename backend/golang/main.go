@@ -208,17 +208,17 @@ func (app *App) logout(c *gin.Context) {
 
 }
 
-func (app *App) FindUsers(c *gin.Context) {
-	// Retrieve users from database
-	var users []models.User
+// func (app *App) FindUsers(c *gin.Context) {
+// 	// Retrieve users from database
+// 	var users []models.User
 
-	result := app.DB.Find(&users)
+// 	result := app.DB.Find(&users)
 
-	c.IndentedJSON(http.StatusOK, gin.H{
-		"result": result,
-	})
+// 	c.IndentedJSON(http.StatusOK, gin.H{
+// 		"result": result,
+// 	})
 
-}
+// }
 
 func main() {
 
@@ -278,7 +278,7 @@ func main() {
 	r.GET("/viewproverbs", app.ViewProverbs)
 	//view specific proverb
 	r.GET("/viewproverbs/:id", app.ViewProverb)
-	r.GET("/findusers", app.FindUsers)
+	r.GET("/findusers", cron.FindUsers)
 
 	r.Run(":" + os.Getenv("PORT"))
 

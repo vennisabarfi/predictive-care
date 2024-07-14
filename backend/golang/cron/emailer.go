@@ -3,30 +3,70 @@ package cron
 import (
 	"fmt"
 	"log"
+	"net/http"
 	"os"
 	"strconv"
-	"user_auth/handlers"
+	"user_auth/models"
+	"user_auth/storage"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-gomail/gomail"
 	"github.com/joho/godotenv"
+	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
 // App struct to hold dependencies
-type App struct {
-	DB *gorm.DB
-}
+var db *gorm.DB
 
-func (app *App) FindUsers(c *gin.Context) {
+func FindUsers(c *gin.Context) {
+
+	// Establish PostgreSQL connection
+	config := &storage.Config{
+		Host:     os.Getenv("DB_HOST"),
+		Port:     os.Getenv("DB_PORT"),
+		User:     os.Getenv("DB_USER"),
+		Password: os.Getenv("DB_PASS"),
+		DBName:   os.Getenv("DB_NAME"),
+		SSLMode:  os.Getenv("DB_SSLMODE"),
+	}
+
+	//Refactor this to call on storage
+	db, err := gorm.Open(postgres.New(postgres.Config{
+		DSN: fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
+			config.Host, config.Port, config.User, config.Password, config.DBName, config.SSLMode),
+	}), &gorm.Config{})
+	if err != nil {
+		log.Fatalf("Error connecting to database: %v", err)
+	}
+	fmt.Println("Connected to Database!.")
+
 	// Retrieve users from database
-	var proverb []handlers.Proverb
 
-	result := app.DB.Find(&proverb) //rows
+	var users []models.User
+	results := db.Find(&users)
 
-	fmt.Print(result)
+	if results.Error != nil {
+		println(results.Error)
+	}
+
+	c.JSON(http.StatusOK, users)
+
+	// // Retrieve users from database
+	// type emails []string
+	// var email []models.User
+
+	// //isolate email column
+	// results := db.Table("users").Select("email").Find(&email).Error
+
+	// if results.Error != nil {
+	// 	println(results.Error)
+	// }
+
+	// c.JSON(http.StatusOK, email)
 
 }
+
 func SendEmail() {
 	// List of recipients
 

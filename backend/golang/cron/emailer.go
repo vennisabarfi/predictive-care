@@ -5,7 +5,9 @@ import (
 	"log"
 	"os"
 	"strconv"
+	"user_auth/handlers"
 
+	"github.com/gin-gonic/gin"
 	"github.com/go-gomail/gomail"
 	"github.com/joho/godotenv"
 	"gorm.io/gorm"
@@ -16,6 +18,15 @@ type App struct {
 	DB *gorm.DB
 }
 
+func (app *App) FindUsers(c *gin.Context) {
+	// Retrieve users from database
+	var proverb []handlers.Proverb
+
+	result := app.DB.Find(&proverb) //rows
+
+	fmt.Print(result)
+
+}
 func SendEmail() {
 	// List of recipients
 

@@ -208,6 +208,18 @@ func (app *App) logout(c *gin.Context) {
 
 }
 
+func (app *App) FindUsers(c *gin.Context) {
+	// Retrieve users from database
+	var users []models.User
+
+	result := app.DB.Find(&users)
+
+	c.IndentedJSON(http.StatusOK, gin.H{
+		"result": result,
+	})
+
+}
+
 func main() {
 
 	r := gin.New()
@@ -254,6 +266,8 @@ func main() {
 
 	app := &App{DB: db}
 
+	//test
+
 	//login user
 	r.POST("/login", app.login)
 	//register user
@@ -264,6 +278,7 @@ func main() {
 	r.GET("/viewproverbs", app.ViewProverbs)
 	//view specific proverb
 	r.GET("/viewproverbs/:id", app.ViewProverb)
+	r.GET("/findusers", app.FindUsers)
 
 	r.Run(":" + os.Getenv("PORT"))
 

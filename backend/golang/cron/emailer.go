@@ -41,29 +41,17 @@ func FindUsers(c *gin.Context) {
 	}
 	fmt.Println("Connected to Database!.")
 
-	// Retrieve users from database
+	type User = models.User
 
-	var users []models.User
-	results := db.Find(&users)
+	var emails []string
 
-	if results.Error != nil {
-		println(results.Error)
+	result := db.Model(&User{}).Pluck("email", &emails)
+
+	if result.Error != nil {
+		fmt.Println(result.Error)
 	}
 
-	c.JSON(http.StatusOK, users)
-
-	// // Retrieve users from database
-	// type emails []string
-	// var email []models.User
-
-	// //isolate email column
-	// results := db.Table("users").Select("email").Find(&email).Error
-
-	// if results.Error != nil {
-	// 	println(results.Error)
-	// }
-
-	// c.JSON(http.StatusOK, email)
+	c.JSON(http.StatusOK, emails)
 
 }
 

@@ -41,10 +41,13 @@ func FindUsers(c *gin.Context) {
 	}
 	fmt.Println("Connected to Database!.")
 
+	// call user struct from models
 	type User = models.User
 
+	// initialize slice of emails
 	var emails []string
 
+	// retrieve emails from database and append into an array (slice)
 	result := db.Model(&User{}).Pluck("email", &emails)
 
 	if result.Error != nil {

@@ -257,7 +257,7 @@ func main() {
 		log.Println("User Database migrated successfully.")
 	}
 
-	handlers.InsertProverb()
+	// handlers.InsertProverb()
 
 	cron.SendMail()
 

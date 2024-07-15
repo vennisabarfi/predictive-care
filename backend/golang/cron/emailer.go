@@ -59,18 +59,16 @@ func SendMail() {
 	var count int64
 
 	// find the total number of rows in database
-	db.Raw("SELECT COUNT(*) FROM public.proverbs").Scan(&count)
+	db.Table("proverbs").Count(&count)
+	// db.Raw("SELECT COUNT(*) FROM public.proverbs").Scan(&count)
 	fmt.Println(count)
 
 	id := RandomId(count)
 
-	randomProverb := db.Find(&proverb, id)
+	var randomProverb string
+	db.Raw("SELECT text FROM public.proverbs where id = $1", id).Scan(&randomProverb)
 
-	if randomProverb.Error != nil {
-		fmt.Println(randomProverb.Error)
-	}
-
-	fmt.Println(proverb)
+	fmt.Println(randomProverb)
 
 	// call user struct from models
 	type User = models.User
@@ -141,8 +139,8 @@ func SendMail() {
 	for _, r := range NewsLetter {
 		m.SetHeader("From", "no-reply@example.com") //set company email here
 		m.SetAddressHeader("To", r.Address, r.Name)
-		m.SetHeader("Subject", "Newsletter #1")
-		m.SetBody("text/html", fmt.Sprintf("Hello %s!", r.Name))
+		m.SetHeader("Subject", "Proverb of the Day")
+		m.SetBody("text/html", fmt.Sprintf("Hello %s!"+r.Name+"Here's your proverb of the day!", proverb))
 
 		if err := gomail.Send(s, m); err != nil {
 			log.Printf("Could not send email to %q: %v", r.Address, err)

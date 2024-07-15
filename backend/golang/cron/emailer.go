@@ -16,7 +16,6 @@ import (
 	"gorm.io/gorm"
 )
 
-// App struct to hold dependencies
 var db *gorm.DB
 
 func FindUsers(c *gin.Context) {
@@ -44,8 +43,16 @@ func FindUsers(c *gin.Context) {
 	// call user struct from models
 	type User = models.User
 
-	// initialize slice of emails
+	// initialize slice of emails and usernames
 	var emails []string
+	var usernames []string
+
+	// retrieve emails and usernames from db
+	res := db.Model(&User{}).Pluck("username", &usernames)
+
+	if res.Error != nil {
+		fmt.Println(res.Error)
+	}
 
 	// retrieve emails from database and append into an array (slice)
 	result := db.Model(&User{}).Pluck("email", &emails)
@@ -54,7 +61,10 @@ func FindUsers(c *gin.Context) {
 		fmt.Println(result.Error)
 	}
 
-	c.JSON(http.StatusOK, emails)
+	c.JSON(http.StatusOK, gin.H{
+		"emails":   emails,
+		"username": usernames,
+	})
 
 }
 

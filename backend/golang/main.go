@@ -19,17 +19,16 @@ import (
 )
 
 // App struct to hold dependencies
-type App struct {
-	DB *gorm.DB
-}
+
+var DB *gorm.DB
 
 // View all proverbs in database
 // "/viewproverbs"
-func (app *App) ViewProverbs(c *gin.Context) {
+func ViewProverbs(c *gin.Context) {
 
 	var proverb []handlers.Proverb
 
-	err := app.DB.Find(&proverb)
+	err := DB.Find(&proverb)
 
 	if err != nil {
 		c.IndentedJSON(http.StatusBadRequest, gin.H{
@@ -46,11 +45,11 @@ func (app *App) ViewProverbs(c *gin.Context) {
 
 // add tests for when no more proverbs
 // View Specific Proverb by ID ("/viewproverbs/:id")
-func (app *App) ViewProverb(c *gin.Context) {
+func ViewProverb(c *gin.Context) {
 	var proverb []handlers.Proverb
 	id := c.Param("id")
 
-	err := app.DB.First(&proverb, id)
+	err := DB.First(&proverb, id)
 
 	if err != nil {
 		c.IndentedJSON(http.StatusBadRequest, gin.H{
@@ -65,7 +64,7 @@ func (app *App) ViewProverb(c *gin.Context) {
 }
 
 // Sign up handler
-func (app *App) register(c *gin.Context) {
+func register(c *gin.Context) {
 	//Get email and password from req body
 
 	var body struct {
@@ -97,12 +96,12 @@ func (app *App) register(c *gin.Context) {
 	log.Printf("Received user data: %+v", user)
 
 	// Check if the db variable is not nil
-	if app.DB == nil {
+	if DB == nil {
 		log.Println("Database connection is not initialized")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database connection is not initialized"})
 		return
 	}
-	result := app.DB.Create(&user)
+	result := DB.Create(&user)
 
 	// Log successful user creation
 	log.Printf("User created: %+v", user)
@@ -125,7 +124,7 @@ func (app *App) register(c *gin.Context) {
 /*
 login handler. Parses a form and checks for specific data
 */
-func (app *App) login(c *gin.Context) {
+func login(c *gin.Context) {
 	// parse email and password from body
 	var body struct {
 		Email    string `json:"email" binding:"required,email"`
@@ -143,7 +142,7 @@ func (app *App) login(c *gin.Context) {
 	//Get user from database
 
 	var user models.User
-	result := app.DB.Where("email =?", body.Email).First(&user)
+	result := DB.Where("email =?", body.Email).First(&user)
 
 	if result.Error != nil {
 		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
@@ -198,7 +197,7 @@ func (app *App) login(c *gin.Context) {
 }
 
 // logout handler
-func (app *App) logout(c *gin.Context) {
+func logout(c *gin.Context) {
 	//Clear cookie
 	c.SetCookie("Authorization", "", -1, "", "", false, true)
 
@@ -264,20 +263,20 @@ func main() {
 
 	// cron.FirstCron()
 
-	app := &App{DB: db}
+	// app := &App{DB: db}
 
 	//test
 
 	//login user
-	r.POST("/login", app.login)
+	r.POST("/login", login)
 	//register user
-	r.POST("/register", app.register)
+	r.POST("/register", register)
 	//logout user
-	r.GET("/logout", app.logout)
+	r.GET("/logout", logout)
 	//view all proverbs
-	r.GET("/viewproverbs", app.ViewProverbs)
+	r.GET("/viewproverbs", ViewProverbs)
 	//view specific proverb
-	r.GET("/viewproverbs/:id", app.ViewProverb)
+	r.GET("/viewproverbs/:id", ViewProverb)
 	r.GET("/findusers", cron.FindUsers)
 
 	r.Run(":" + os.Getenv("PORT"))

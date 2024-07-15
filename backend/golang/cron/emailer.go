@@ -3,15 +3,14 @@ package cron
 import (
 	"fmt"
 	"log"
-	"net/http"
+	"math/rand"
 	"os"
-	"reflect"
 	"strconv"
-	"strings"
+	"time"
+	"user_auth/handlers"
 	"user_auth/models"
 	"user_auth/storage"
 
-	"github.com/gin-gonic/gin"
 	"github.com/go-gomail/gomail"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -19,30 +18,21 @@ import (
 
 var db *gorm.DB
 
-func convert(data interface{}) string {
-	v := reflect.ValueOf(data)
-	n := v.NumField()
+// generates a random number between one and the given number
+func RandomId(num int64) int64 {
+	rand.NewSource(time.Now().UnixNano())
+	var min int64
+	var result int64
+	min = 1
+	max := num
 
-	st := reflect.TypeOf(data)
-	headers := make([]string, n)
-	for i := 0; i < n; i++ {
-		headers[i] = fmt.Sprintf(`"%s": %d`, st.Field(i).Name, i)
-	}
+	result = rand.Int63n(max-min+1) + min //returns int64
 
-	rowContents := make([]string, n)
-	for i := 0; i < n; i++ {
-		x := v.Field(i)
-		s := fmt.Sprintf("%v", x.Interface())
-		if x.Type().String() == "string" {
-			s = `"` + s + `"`
-		}
-		rowContents[i] = s
-	}
+	return result
 
-	return "{" + strings.Join(headers, ", ") + `, "rows": [[` + strings.Join(rowContents, ", ") + "]]}"
 }
 
-func FindUsers(c *gin.Context) {
+func SendMail() {
 
 	// Establish PostgreSQL connection
 	config := &storage.Config{
@@ -63,6 +53,24 @@ func FindUsers(c *gin.Context) {
 		log.Fatalf("Error connecting to database: %v", err)
 	}
 	fmt.Println("Connected to Database!.")
+
+	//choose random proverb from database
+	var proverb []handlers.Proverb
+	var count int64
+
+	// find the total number of rows in database
+	db.Raw("SELECT COUNT(*) FROM public.proverbs").Scan(&count)
+	fmt.Println(count)
+
+	id := RandomId(count)
+
+	randomProverb := db.Find(&proverb, id)
+
+	if randomProverb.Error != nil {
+		fmt.Println(randomProverb.Error)
+	}
+
+	fmt.Println(proverb)
 
 	// call user struct from models
 	type User = models.User
@@ -114,25 +122,6 @@ func FindUsers(c *gin.Context) {
 		fmt.Printf(user.Name)
 	}
 
-	c.JSON(http.StatusOK, gin.H{
-		"emails":   emails,
-		"username": usernames,
-	})
-
-	// List of recipients
-
-	// var list []struct {
-	// 	Name    string //username
-	// 	Address string //email address
-	// }
-
-	// Using MailHog (SMTP server on port 1025). Docker Run!
-
-	// err := godotenv.Load(".env")
-	// if err != nil {
-	// 	panic(err)
-	// }
-
 	// convert port number to int
 	smtp_port := os.Getenv("SMTP_PORT")
 	port, err := strconv.Atoi(smtp_port) // port number
@@ -150,7 +139,7 @@ func FindUsers(c *gin.Context) {
 
 	m := gomail.NewMessage()
 	for _, r := range NewsLetter {
-		m.SetHeader("From", "no-reply@example.com")
+		m.SetHeader("From", "no-reply@example.com") //set company email here
 		m.SetAddressHeader("To", r.Address, r.Name)
 		m.SetHeader("Subject", "Newsletter #1")
 		m.SetBody("text/html", fmt.Sprintf("Hello %s!", r.Name))

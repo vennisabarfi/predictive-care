@@ -259,7 +259,7 @@ func main() {
 
 	handlers.InsertProverb()
 
-	// cron.SendEmail()
+	cron.SendMail()
 
 	// cron.FirstCron()
 
@@ -277,7 +277,6 @@ func main() {
 	r.GET("/viewproverbs", ViewProverbs)
 	//view specific proverb
 	r.GET("/viewproverbs/:id", ViewProverb)
-	r.GET("/findusers", cron.FindUsers)
 
 	r.Run(":" + os.Getenv("PORT"))
 

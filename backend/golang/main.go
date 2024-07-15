@@ -233,21 +233,20 @@ func main() {
 		log.Println(".env file loaded successfully.")
 	}
 
-	config := &storage.Config{
-		Host:     os.Getenv("DB_HOST"),
-		Port:     os.Getenv("DB_PORT"),
-		Password: os.Getenv("DB_PASS"),
-		User:     os.Getenv("DB_USER"),
-		DBName:   os.Getenv("DB_NAME"),
-		SSLMode:  os.Getenv("DB_SSLMODE"),
-	}
+	// config := &storage.Config{
+	// 	Host:     os.Getenv("DB_HOST"),
+	// 	Port:     os.Getenv("DB_PORT"),
+	// 	Password: os.Getenv("DB_PASS"),
+	// 	User:     os.Getenv("DB_USER"),
+	// 	DBName:   os.Getenv("DB_NAME"),
+	// 	SSLMode:  os.Getenv("DB_SSLMODE"),
+	// }
 
-	db, err := storage.NewConnection(config)
+	// db, err := storage.NewConnection(config)
 
+	db, err := storage.ConnectToDB()
 	if err != nil {
-		log.Fatal("Error connecting to database", err)
-	} else {
-		log.Println(("Database connection established"))
+		log.Fatalf("Failed to connect to database: %v", err)
 	}
 
 	err = models.MigrateUser(db)

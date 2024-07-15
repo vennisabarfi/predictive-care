@@ -7,16 +7,11 @@ import (
 	"os"
 	"strconv"
 	"time"
-	"user_auth/handlers"
 	"user_auth/models"
 	"user_auth/storage"
 
 	"github.com/go-gomail/gomail"
-	"gorm.io/driver/postgres"
-	"gorm.io/gorm"
 )
-
-var db *gorm.DB
 
 // generates a random number between one and the given number
 func RandomId(num int64) int64 {
@@ -32,31 +27,16 @@ func RandomId(num int64) int64 {
 
 }
 
-func SendMail() {
+// choose random proverb from database
+func RandomProverb() string {
 
-	// Establish PostgreSQL connection
-	config := &storage.Config{
-		Host:     os.Getenv("DB_HOST"),
-		Port:     os.Getenv("DB_PORT"),
-		User:     os.Getenv("DB_USER"),
-		Password: os.Getenv("DB_PASS"),
-		DBName:   os.Getenv("DB_NAME"),
-		SSLMode:  os.Getenv("DB_SSLMODE"),
-	}
-
-	//Refactor this to call on storage
-	db, err := gorm.Open(postgres.New(postgres.Config{
-		DSN: fmt.Sprintf("host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
-			config.Host, config.Port, config.User, config.Password, config.DBName, config.SSLMode),
-	}), &gorm.Config{})
+	db, err := storage.ConnectToDB()
 	if err != nil {
-		log.Fatalf("Error connecting to database: %v", err)
+		log.Fatalf("Failed to connect to database: %v", err)
 	}
-	fmt.Println("Connected to Database!.")
 
-	//choose random proverb from database
-	var proverb []handlers.Proverb
 	var count int64
+	var randomProverb string
 
 	// find the total number of rows in database
 	db.Table("proverbs").Count(&count)
@@ -65,10 +45,18 @@ func SendMail() {
 
 	id := RandomId(count)
 
-	var randomProverb string
 	db.Raw("SELECT text FROM public.proverbs where id = $1", id).Scan(&randomProverb)
+	print("Random proverb selected")
 
-	fmt.Println(randomProverb)
+	return randomProverb
+}
+
+func SendMail() {
+
+	db, err := storage.ConnectToDB()
+	if err != nil {
+		log.Fatalf("Failed to connect to database: %v", err)
+	}
 
 	// call user struct from models
 	type User = models.User
@@ -135,12 +123,13 @@ func SendMail() {
 		fmt.Println("SMTP Server is up and running")
 	}
 
+	// work on refactoring and including text.html
 	m := gomail.NewMessage()
 	for _, r := range NewsLetter {
-		m.SetHeader("From", "no-reply@example.com") //set company email here
+		m.SetHeader("From", "no-reply@example.com") //set sender email here
 		m.SetAddressHeader("To", r.Address, r.Name)
 		m.SetHeader("Subject", "Proverb of the Day")
-		m.SetBody("text/html", fmt.Sprintf("Hello %s!"+r.Name+"Here's your proverb of the day!", proverb))
+		m.SetBody("text/html", fmt.Sprintf("Hello %s!"+r.Name+"Here's your proverb of the day!", RandomProverb()))
 
 		if err := gomail.Send(s, m); err != nil {
 			log.Printf("Could not send email to %q: %v", r.Address, err)

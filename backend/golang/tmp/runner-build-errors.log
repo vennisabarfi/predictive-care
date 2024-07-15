@@ -1,0 +1,2 @@
+# user_auth/cron
+cron\emailer.go:51:10: cannot use err (variable of type *gorm.DB) as string value in return statement

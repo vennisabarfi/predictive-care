@@ -259,7 +259,7 @@ func main() {
 
 	handlers.InsertProverb()
 
-	cron.SendEmail()
+	// cron.SendEmail()
 
 	// cron.FirstCron()
 

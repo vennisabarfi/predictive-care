@@ -5,18 +5,42 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"reflect"
 	"strconv"
+	"strings"
 	"user_auth/models"
 	"user_auth/storage"
 
 	"github.com/gin-gonic/gin"
 	"github.com/go-gomail/gomail"
-	"github.com/joho/godotenv"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
 
 var db *gorm.DB
+
+func convert(data interface{}) string {
+	v := reflect.ValueOf(data)
+	n := v.NumField()
+
+	st := reflect.TypeOf(data)
+	headers := make([]string, n)
+	for i := 0; i < n; i++ {
+		headers[i] = fmt.Sprintf(`"%s": %d`, st.Field(i).Name, i)
+	}
+
+	rowContents := make([]string, n)
+	for i := 0; i < n; i++ {
+		x := v.Field(i)
+		s := fmt.Sprintf("%v", x.Interface())
+		if x.Type().String() == "string" {
+			s = `"` + s + `"`
+		}
+		rowContents[i] = s
+	}
+
+	return "{" + strings.Join(headers, ", ") + `, "rows": [[` + strings.Join(rowContents, ", ") + "]]}"
+}
 
 func FindUsers(c *gin.Context) {
 
@@ -60,27 +84,55 @@ func FindUsers(c *gin.Context) {
 	if result.Error != nil {
 		fmt.Println(result.Error)
 	}
+	// Create a userlist struct to store usernames and emails
+	type UserList struct {
+		Name    string //usernames
+		Address string //emails
+	}
+
+	// initialize email and username lists
+	var EmailList []string
+	var UsernameList []string
+
+	// append emails and usernames to lists
+	EmailList = append(EmailList, emails...)
+	UsernameList = append(UsernameList, usernames...)
+
+	fmt.Println(EmailList, UsernameList)
+
+	// initialize newsletter list to append combine EmailList and UsernameList
+	var NewsLetter []UserList
+
+	for i := range EmailList {
+		NewsLetter = append(NewsLetter, UserList{
+			Name:    UsernameList[i],
+			Address: EmailList[i],
+		})
+	}
+
+	for _, user := range NewsLetter {
+		fmt.Printf(user.Name)
+	}
 
 	c.JSON(http.StatusOK, gin.H{
 		"emails":   emails,
 		"username": usernames,
 	})
 
-}
-
-func SendEmail() {
 	// List of recipients
 
-	var list []struct {
-		Name    string //username
-		Address string //email address
-	}
+	// var list []struct {
+	// 	Name    string //username
+	// 	Address string //email address
+	// }
 
 	// Using MailHog (SMTP server on port 1025). Docker Run!
-	err := godotenv.Load(".env")
-	if err != nil {
-		panic(err)
-	}
+
+	// err := godotenv.Load(".env")
+	// if err != nil {
+	// 	panic(err)
+	// }
+
 	// convert port number to int
 	smtp_port := os.Getenv("SMTP_PORT")
 	port, err := strconv.Atoi(smtp_port) // port number
@@ -97,7 +149,7 @@ func SendEmail() {
 	}
 
 	m := gomail.NewMessage()
-	for _, r := range list {
+	for _, r := range NewsLetter {
 		m.SetHeader("From", "no-reply@example.com")
 		m.SetAddressHeader("To", r.Address, r.Name)
 		m.SetHeader("Subject", "Newsletter #1")

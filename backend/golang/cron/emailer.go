@@ -6,12 +6,15 @@ import (
 	"math/rand"
 	"os"
 	"strconv"
+	"sync"
 	"time"
 	"user_auth/models"
 	"user_auth/storage"
 
 	"github.com/go-gomail/gomail"
 )
+
+var mu sync.Mutex
 
 // generates a random number between one and the given number
 func RandomId(num int64) int64 {
@@ -52,6 +55,10 @@ func RandomProverb() string {
 }
 
 func SendMail() {
+	//using mutex to avoid race conditions
+	// only one goroutine can access shared resource
+	mu.Lock()
+	defer mu.Unlock()
 
 	db, err := storage.ConnectToDB()
 	if err != nil {

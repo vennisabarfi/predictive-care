@@ -235,9 +235,8 @@ func main() {
 
 	// handlers.InsertProverb() -- activate once to insert proverbs
 
-	cron.SendMail()
-
-	//test
+	// run newsletter cron
+	cron.NewsletterCron()
 
 	// routers
 

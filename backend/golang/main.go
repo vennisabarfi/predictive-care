@@ -207,9 +207,19 @@ func logout(c *gin.Context) {
 
 }
 
-func main() {
+// set up server (for testing purposes)
+func StartServer() *gin.Engine {
+	r := gin.Default()
+	r.GET("/ping", func(c *gin.Context) {
+		c.String(200, "pong")
 
+	})
+	return r
+}
+
+func main() {
 	r := gin.New()
+
 	// port := os.Getenv("PORT")
 
 	// set up security headers

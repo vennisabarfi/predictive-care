@@ -20,7 +20,7 @@ import (
 
 // App struct to hold dependencies
 
-var DB *gorm.DB
+var db *gorm.DB
 
 // View all proverbs in database
 // "/viewproverbs"
@@ -28,7 +28,7 @@ func ViewProverbs(c *gin.Context) {
 
 	var proverb []handlers.Proverb
 
-	err := DB.Find(&proverb)
+	err := db.Find(&proverb)
 
 	if err != nil {
 		c.IndentedJSON(http.StatusBadRequest, gin.H{
@@ -49,7 +49,7 @@ func ViewProverb(c *gin.Context) {
 	var proverb []handlers.Proverb
 	id := c.Param("id")
 
-	err := DB.First(&proverb, id)
+	err := db.First(&proverb, id)
 
 	if err != nil {
 		c.IndentedJSON(http.StatusBadRequest, gin.H{
@@ -96,12 +96,12 @@ func register(c *gin.Context) {
 	log.Printf("Received user data: %+v", user)
 
 	// Check if the db variable is not nil
-	if DB == nil {
+	if db == nil {
 		log.Println("Database connection is not initialized")
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Database connection is not initialized"})
 		return
 	}
-	result := DB.Create(&user)
+	result := db.Create(&user)
 
 	// Log successful user creation
 	log.Printf("User created: %+v", user)
@@ -142,7 +142,7 @@ func login(c *gin.Context) {
 	//Get user from database
 
 	var user models.User
-	result := DB.Where("email =?", body.Email).First(&user)
+	result := db.Where("email =?", body.Email).First(&user)
 
 	if result.Error != nil {
 		if errors.Is(result.Error, gorm.ErrRecordNotFound) {
@@ -207,18 +207,6 @@ func logout(c *gin.Context) {
 
 }
 
-// func (app *App) FindUsers(c *gin.Context) {
-// 	// Retrieve users from database
-// 	var users []models.User
-
-// 	result := app.DB.Find(&users)
-
-// 	c.IndentedJSON(http.StatusOK, gin.H{
-// 		"result": result,
-// 	})
-
-// }
-
 func main() {
 
 	r := gin.New()
@@ -233,20 +221,9 @@ func main() {
 		log.Println(".env file loaded successfully.")
 	}
 
-	// config := &storage.Config{
-	// 	Host:     os.Getenv("DB_HOST"),
-	// 	Port:     os.Getenv("DB_PORT"),
-	// 	Password: os.Getenv("DB_PASS"),
-	// 	User:     os.Getenv("DB_USER"),
-	// 	DBName:   os.Getenv("DB_NAME"),
-	// 	SSLMode:  os.Getenv("DB_SSLMODE"),
-	// }
-
-	// db, err := storage.NewConnection(config)
-
 	db, err := storage.ConnectToDB()
 	if err != nil {
-		log.Fatalf("Failed to connect to database: %v", err)
+		panic(err)
 	}
 
 	err = models.MigrateUser(db)
@@ -256,15 +233,13 @@ func main() {
 		log.Println("User Database migrated successfully.")
 	}
 
-	// handlers.InsertProverb()
+	// handlers.InsertProverb() -- activate once to insert proverbs
 
 	cron.SendMail()
 
-	// cron.FirstCron()
-
-	// app := &App{DB: db}
-
 	//test
+
+	// routers
 
 	//login user
 	r.POST("/login", login)

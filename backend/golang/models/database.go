@@ -6,9 +6,6 @@ import (
 	"gorm.io/gorm"
 )
 
-// User can have many artists to track
-// Define User model
-
 type User struct {
 	gorm.Model
 	ID        uint    `json:"id" gorm:"primary_key"`
@@ -23,10 +20,6 @@ type User struct {
 type Proverb struct {
 	gorm.Model
 	Text string `json:"text"`
-}
-
-// Define Meanings model
-type Meanings struct {
 }
 
 func MigrateUser(db *gorm.DB) error {

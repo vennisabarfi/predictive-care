@@ -17,19 +17,6 @@ type Config struct {
 	SSLMode  string
 }
 
-// func NewConnection(config *Config) (*gorm.DB, error) {
-// 	dsn := fmt.Sprintf(
-// 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=%s",
-// 		config.Host, config.Port, config.User, config.Password, config.DBName, config.SSLMode,
-// 	)
-
-// 	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{})
-// 	if err != nil {
-// 		return db, err
-// 	}
-// 	return db, nil
-// }
-
 func GetDBConfig() *Config {
 	return &Config{
 		Host:     os.Getenv("DB_HOST"),
@@ -52,9 +39,9 @@ func ConnectToDB() (*gorm.DB, error) {
 	}), &gorm.Config{})
 
 	if err != nil {
-		return nil, fmt.Errorf("error connecting to database: %w", err)
+		panic(err)
 	}
+	fmt.Println("Successfully connected to the database!")
 
-	fmt.Println("Connected to Database!")
 	return db, nil
 }

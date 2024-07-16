@@ -65,14 +65,14 @@ func SendMail() {
 	var emails []string
 	var usernames []string
 
-	// retrieve emails and usernames from db
+	// retrieve usernames from db
 	res := db.Model(&User{}).Pluck("username", &usernames)
 
 	if res.Error != nil {
 		fmt.Println(res.Error)
 	}
 
-	// retrieve emails from database and append into an array (slice)
+	// retrieve emails from database
 	result := db.Model(&User{}).Pluck("email", &emails)
 
 	if result.Error != nil {
@@ -90,13 +90,13 @@ func SendMail() {
 
 	// append emails and usernames to lists
 	EmailList = append(EmailList, emails...)
+
 	UsernameList = append(UsernameList, usernames...)
 
-	fmt.Println(EmailList, UsernameList)
-
-	// initialize newsletter list to append combine EmailList and UsernameList
+	// initialize newsletter list to combine EmailList and UsernameList
 	var NewsLetter []UserList
 
+	// append usernamelist and emaillist to newsletter
 	for i := range EmailList {
 		NewsLetter = append(NewsLetter, UserList{
 			Name:    UsernameList[i],
@@ -104,6 +104,7 @@ func SendMail() {
 		})
 	}
 
+	// print out usernames from newsletter(to test)
 	for _, user := range NewsLetter {
 		fmt.Printf(user.Name)
 	}

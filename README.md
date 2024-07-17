@@ -156,6 +156,7 @@ meanings.to_json('meanings_data.json', index=False)
 This project is an extension of my earlier work where I webscraped African proverbs and cleaned the data. You can find the previous project [here]([https://github.com/venn](https://github.com/vennisabarfi/Proverb-Recommendation-Engine-Website/)).
 
 ### Next Steps
+- Complete Frontend
 - Integrate More Tests
 - Dockerize
 - Add Swagger Documentation for API
